@@ -1,0 +1,825 @@
+[
+  {
+    "id": "upi_fraud",
+    "title": "UPI Fraud",
+    "titleMr": "यूपीआय फसवणूक",
+    "shortSummary": "Money lost or moved via UPI through deception, a fake collect request, or a compromised app.",
+    "shortSummaryMr": "खोटी मागणी, दिशाभूल किंवा हॅक केलेल्या ॲपद्वारे यूपीआयवरून पैसे चोरीला जाणे.",
+    "riskLevelDefault": "HIGH",
+    "whatIsIt": "A victim is tricked into approving a UPI payment or collect request, or their UPI app/credentials are misused, resulting in money leaving their account without informed consent.",
+    "whatIsItMr": "फसवणूक करणारी व्यक्ती नागरिकाला यूपीआय क्यूआर कोड स्कॅन करण्यास किंवा 'पैसे मिळतील' असे सांगून पैसे ट्रान्सफर करण्यास प्रवृत्त करते.",
+    "howDoesItHappen": [
+      "A fraudulent 'collect request' is disguised as a refund or cashback claim.",
+      "A fake customer care caller guides the victim to enter UPI PIN to receive money (PIN is only needed to SEND money).",
+      "Scanning a QR code disguised as 'accepting payment' which actually deducts funds.",
+      "Remote-access apps installed on phone giving scammer visibility of PIN."
+    ],
+    "warningSigns": [
+      "Urgent request to enter UPI PIN to 'receive' money or cashback.",
+      "Caller asking you to scan a QR code sent via WhatsApp to credit money.",
+      "Pressure to act within minutes or risk account block."
+    ],
+    "possibleImpact": [
+      "Immediate financial loss from bank account.",
+      "Potential unauthorized access to linked bank accounts.",
+      "Repeated fraud attempts if device remains compromised."
+    ],
+    "victimActionSteps": [
+      "Immediately call your bank helpline and dial 1930 Helpline.",
+      "Freeze or temporarily block your UPI ID and linked bank account via net banking.",
+      "Do NOT send another rupee to 'reverse' or 'test' the transaction.",
+      "File an official complaint on cybercrime.gov.in within the golden hour.",
+      "Preserve the transaction ID, UPI reference number, and caller details."
+    ],
+    "evidenceToPreserve": [
+      "UPI Transaction ID / UTR Number",
+      "Screenshot of UPI payment summary screen",
+      "SMS alerts received from bank",
+      "WhatsApp/Call log details of the caller",
+      "QR code image shared by scammer"
+    ],
+    "doList": [
+      "Call 1930 immediately to freeze funds in transit.",
+      "Note down exact time and transaction IDs.",
+      "Inform your bank's official fraud department."
+    ],
+    "dontList": [
+      "Never enter your UPI PIN to RECEIVE money.",
+      "Don't click links sent on SMS/WhatsApp claiming UPI cashback.",
+      "Don't make repeat test payments to scammers."
+    ],
+    "whenToReport": "Immediately — reporting within the 'Golden Hour' (first 1–2 hours) gives bank authorities the highest chance of freezing transiting funds via CFCFRMS.",
+    "timelineStages": [
+      { "stage": "Contact & Trigger", "description": "Scammer offers fake cashback, refund, or OLX/marketplace payment." },
+      { "stage": "Deception Step", "description": "Victim guided to scan QR or approve collect request with UPI PIN." },
+      { "stage": "Unauthorized Deduction", "description": "Funds instantly debited from victim's account to mule accounts." },
+      { "stage": "Triage & Recovery Window", "description": "1930 helpline & bank fraud team intervene to trace & freeze funds." }
+    ],
+    "relatedIncidents": ["financial_fraud", "phishing", "account_takeover"]
+  },
+  {
+    "id": "investment_scam",
+    "title": "Investment / Trading / Digital Arrest Scam",
+    "titleMr": "गुंतवणूक / ट्रेडिंग फसवणूक / डिजिटल अरेस्ट",
+    "shortSummary": "Promised high returns on stocks, forex, crypto or threatened with 'Digital Arrest' by fake police officers.",
+    "shortSummaryMr": "शेअर बाजार, फॉरेक्स किंवा डिजिटल अरेस्टच्या नावाने मोठी फसवणूक.",
+    "riskLevelDefault": "HIGH",
+    "whatIsIt": "Victims are lured into fake trading platforms showing inflated profits or blackmailed through video calls by scammers impersonating CBI/ED/Cyber Police under the pretext of 'Digital Arrest'.",
+    "whatIsItMr": "बनावट ट्रेडिंग ॲपद्वारे जास्त परताव्याचे आमिष दाखवणे किंवा बनावट पोलीस अधिकारी बनून डिजिटल अरेस्टची भीती दाखवून पैशांची उकळत करणे.",
+    "howDoesItHappen": [
+      "Added to WhatsApp/Telegram groups promising 500%+ stock returns.",
+      "Guided to download custom APKs or unapproved trading dashboards showing fake balances.",
+      "Withdrawal requests blocked until 'service taxes' or 'SEBI fees' are paid.",
+      "Fake police video calls threatening arrest unless money is transferred to 'verification accounts'."
+    ],
+    "warningSigns": [
+      "Guaranteed zero-risk stock returns exceeding market averages.",
+      "Pressure to deposit money into personal savings accounts instead of official brokers.",
+      "Police/CBI video calls on WhatsApp insisting you stay on camera continuously."
+    ],
+    "possibleImpact": [
+      "Severe financial loss running into lakhs/crores.",
+      "Extortion and emotional trauma.",
+      "Compromised personal identity documents shared for account creation."
+    ],
+    "victimActionSteps": [
+      "Stop transferring any more funds immediately — no genuine authority asks for money to clear charges.",
+      "Disconnect all WhatsApp/Skype video calls from fake authorities.",
+      "Call 1930 cyber crime helpline immediately to report mule bank accounts.",
+      "File a detailed report on cybercrime.gov.in with bank account details of scammers.",
+      "Contact your nearest Cyber Police Station with transaction printouts."
+    ],
+    "evidenceToPreserve": [
+      "Bank transfer receipts / NEFT / RTGS details",
+      "Screenshots of trading dashboard and fake profit numbers",
+      "Chat exports of WhatsApp/Telegram investment groups",
+      "Account numbers and IFSC codes provided by scammers",
+      "Video call screenshots/recordings if available"
+    ],
+    "doList": [
+      "Verify investment firms on official SEBI portal (sebi.gov.in).",
+      "Report fake police calls to 1930 instantly.",
+      "Preserve all transaction bank statements."
+    ],
+    "dontList": [
+      "Never pay 'taxes' to withdraw your own invested money.",
+      "Never believe 'Digital Arrest' threats — law enforcement does not arrest over WhatsApp calls.",
+      "Don't share bank details in public Telegram groups."
+    ],
+    "whenToReport": "Immediately — police can freeze receiving mule accounts before money is withdrawn at ATMs.",
+    "timelineStages": [
+      { "stage": "Lure or Threat", "description": "Victim invited to VIP trading group or receives fake police call." },
+      { "stage": "Initial Small Returns", "description": "Small initial payout allowed to build false confidence." },
+      { "stage": "Massive Deposit Phase", "description": "Victim persuaded to invest large sums or pay fake clearance fines." },
+      { "stage": "Lockout & Extortion", "description": "Withdrawal denied; scammers demand extra fee or vanish." }
+    ],
+    "relatedIncidents": ["financial_fraud", "phishing", "online_harassment"]
+  },
+  {
+    "id": "financial_fraud",
+    "title": "Financial & Credit Card Fraud",
+    "titleMr": "आर्थिक व क्रेडिट कार्ड फसवणूक",
+    "shortSummary": "Unauthorized bank transfers, card cloning, ATM fraud, or unauthorized wallet debits.",
+    "shortSummaryMr": "अनधिकृत बँक व्यवहार, कार्ड क्लोनिंग किंवा वॉलेटमधून पैसे जाणे.",
+    "riskLevelDefault": "HIGH",
+    "whatIsIt": "Unauthorized movement of funds from bank accounts, credit/debit cards, or prepaid wallets via stolen credentials or compromised channels.",
+    "whatIsItMr": "बँक खाते किंवा क्रेडिट/डेबिट कार्डचा वापर करून नागरिकांच्या संमतीविना केलेले अनधिकृत व्यवहार.",
+    "howDoesItHappen": [
+      "Card details skimmed at ATMs or POS terminals.",
+      "Phishing calls collecting OTP, CVV, and card expiry dates.",
+      "Unauthorized auto-debit set up on malicious websites."
+    ],
+    "warningSigns": [
+      "Unexpected debit SMS for transactions you did not initiate.",
+      "OTP SMS received for unknown transactions.",
+      "Bank notifications during odd hours."
+    ],
+    "possibleImpact": [
+      "Financial loss.",
+      "Temporary freeze on credit limits.",
+      "Unauthorized recurring subscriptions."
+    ],
+    "victimActionSteps": [
+      "Call bank customer care immediately to block the compromised card/account.",
+      "Dial 1930 to freeze transit funds.",
+      "Report on cybercrime.gov.in.",
+      "Submit dispute form at your bank branch within 3 days for ZERO liability under RBI guidelines."
+    ],
+    "evidenceToPreserve": [
+      "Bank transaction SMS & email alerts",
+      "Card statement highlighting fraudulent debits",
+      "Call logs of callers claiming to be bank staff"
+    ],
+    "doList": [
+      "Block card via mobile banking app instantly.",
+      "File formal written dispute with bank within 72 hours.",
+      "Keep 1930 acknowledgement number."
+    ],
+    "dontList": [
+      "Don't share OTP/CVV even if caller claims to be bank manager.",
+      "Don't store card details on unverified shopping portals."
+    ],
+    "whenToReport": "Within 3 days to qualify for RBI Zero Liability protection.",
+    "timelineStages": [
+      { "stage": "Credential Compromise", "description": "Card details harvested via call or phishing site." },
+      { "stage": "Debit Execution", "description": "Funds debited via international or domestic gateway." },
+      { "stage": "Card Freeze", "description": "Victim blocks card and triggers RBI dispute workflow." }
+    ],
+    "relatedIncidents": ["upi_fraud", "phishing", "malware_apk"]
+  },
+  {
+    "id": "phishing",
+    "title": "Phishing & Fake Websites",
+    "titleMr": "फिशिंग आणि बनावट वेबसाईट",
+    "shortSummary": "Deceptive emails, SMS (Smishing), or links imitating official portals to steal passwords.",
+    "shortSummaryMr": "पासवर्ड, ओटीपी चोरण्यासाठी पाठवलेल्या बनावट लिंक्स आणि ईमेल.",
+    "riskLevelDefault": "MEDIUM",
+    "whatIsIt": "Fraudulent messages or duplicate websites designed to trick users into entering sensitive bank logins, passwords, or personal identity numbers.",
+    "whatIsItMr": "शासकीय किंवा बँक संस्थांसारख्या दिसणाऱ्या बनावट वेबसाईटवरून नागरिक माहिती चोरणे.",
+    "howDoesItHappen": [
+      "SMS claiming electricity bill unpaid, connection to be cut tonight.",
+      "Fake bank KYC update links via SMS.",
+      "Email impersonating income tax refund or reward points."
+    ],
+    "warningSigns": [
+      "Links using unofficial domains (e.g. .xyz, .top, or bit.ly shorteners).",
+      "Sense of extreme urgency or threats of immediate service suspension.",
+      "Spelling errors in email domain names."
+    ],
+    "possibleImpact": [
+      "Compromised online banking or social media accounts.",
+      "Financial theft.",
+      "Identity theft."
+    ],
+    "victimActionSteps": [
+      "Change passwords immediately for affected accounts.",
+      "Enable 2-Factor Authentication (2FA) using an Authenticator app.",
+      "Report phishing URL to sancharsaathi.gov.in (Chakshu portal) and cybercrime.gov.in."
+    ],
+    "evidenceToPreserve": [
+      "Full URL of the phishing website",
+      "Screenshot of the SMS/Email with sender ID",
+      "Header details of phishing email"
+    ],
+    "doList": [
+      "Check address bar for exact domain spelling.",
+      "Report fake links on DoT Chakshu portal."
+    ],
+    "dontList": [
+      "Never enter passwords after clicking SMS links.",
+      "Don't call numbers provided inside suspicious SMS alerts."
+    ],
+    "whenToReport": "Immediately upon discovering credential exposure.",
+    "timelineStages": [
+      { "stage": "Bait SMS/Email", "description": "Urgent notification sent to victim." },
+      { "stage": "Credential Input", "description": "Victim enters credentials on fake portal." },
+      { "stage": "Account Breach", "description": "Attacker logs in to real portal and changes password." }
+    ],
+    "relatedIncidents": ["account_takeover", "upi_fraud", "financial_fraud"]
+  },
+  {
+    "id": "account_takeover",
+    "title": "Account Hacking / Takeover",
+    "titleMr": "खाते हॅकिंग आणि टेकओव्हर",
+    "shortSummary": "Unauthorized loss of control over Instagram, WhatsApp, Facebook, or Email accounts.",
+    "shortSummaryMr": "इन्स्टाग्राम, व्हॉट्सॲप किंवा फेसबुक अकाऊंट हॅक होणे.",
+    "riskLevelDefault": "HIGH",
+    "whatIsIt": "An attacker gains unauthorized access to personal social media or email accounts, often changing passwords and sending scam messages to contacts.",
+    "whatIsItMr": "नागरिकांच्या सोशल मीडिया खात्याचा ताबा घेऊन नातेवाईकांकडे पैशांची मागणी करणे.",
+    "howDoesItHappen": [
+      "Victim tricked into sharing WhatsApp 6-digit verification code.",
+      "Credential stuffing using leaked passwords from other breaches.",
+      "Phishing page asking for Instagram login to clear copyright strike."
+    ],
+    "warningSigns": [
+      "Sudden logout from account and 'Password changed' notification email.",
+      "Friends messaging you about weird emergency money requests sent from your profile.",
+      "WhatsApp unregistering on your phone unexpectedly."
+    ],
+    "possibleImpact": [
+      "Contacts scammed under your name.",
+      "Loss of personal photos/messages.",
+      "Account deletion or ransom demands."
+    ],
+    "victimActionSteps": [
+      "Use official recovery mechanisms (Instagram Account Recovery / WhatsApp PIN reset).",
+      "Alert friends and family via status/SMS that your account is compromised.",
+      "File a complaint on cybercrime.gov.in under Social Media Crime.",
+      "Report the profile directly inside the social media app."
+    ],
+    "evidenceToPreserve": [
+      "Screenshots of login alert emails",
+      "Messages sent by hacker to your contacts",
+      "Original profile URL"
+    ],
+    "doList": [
+      "Enable 2-Step Verification with PIN on WhatsApp & Instagram.",
+      "Warn your contacts immediately."
+    ],
+    "dontList": [
+      "Never share SMS verification OTPs with anyone.",
+      "Don't pay hackers money to restore your account."
+    ],
+    "whenToReport": "Report instantly to social media platform and cyber police.",
+    "timelineStages": [
+      { "stage": "OTP Trick", "description": "Hacker asks victim for code claiming mistaken broadcast." },
+      { "stage": "Takeover", "description": "Hacker changes email/phone linked to profile." },
+      { "stage": "Impersonation", "description": "Messages sent to victim's friends demanding emergency UPI money." }
+    ],
+    "relatedIncidents": ["fake_social_profile", "identity_photo_misuse", "phishing"]
+  },
+  {
+    "id": "fake_social_profile",
+    "title": "Impersonation & Fake Profiles",
+    "titleMr": "बनावट प्रोफाईल आणि तोतयागिरी",
+    "shortSummary": "Fake profiles created using your name, photos, or bio to deceive contacts or harm reputation.",
+    "shortSummaryMr": "तुमचे नाव व फोटो वापरून बनवलेले ड्युप्लिकेट प्रोफाईल.",
+    "riskLevelDefault": "MEDIUM",
+    "whatIsIt": "Creation of duplicate social media accounts pretending to be you to solicit money from friends or damage your reputation.",
+    "whatIsItMr": "तुमचे फोटो व नाव वापरून बनवलेले अकाऊंट ज्याद्वारे इतरांकडे पैशांची मागणी केली जाते.",
+    "howDoesItHappen": [
+      "Scammers download public photos from Facebook/Instagram.",
+      "Create a mirror profile with minor spelling changes in handle.",
+      "Send friend requests to your public friends list claiming 'lost old phone'."
+    ],
+    "warningSigns": [
+      "Friends asking why you sent them a new friend request.",
+      "Duplicate account appearing in search results."
+    ],
+    "possibleImpact": [
+      "Reputational damage.",
+      "Financial loss for friends who fall for the trick."
+    ],
+    "victimActionSteps": [
+      "Report the fake profile inside the app as 'Impersonating me'.",
+      "Post a public broadcast clarifying your genuine handle.",
+      "Lock your Facebook profile to friends-only photo visibility.",
+      "Report on cybercrime.gov.in."
+    ],
+    "evidenceToPreserve": [
+      "URL of the fake profile",
+      "Screenshots of messages sent by fake profile",
+      "Screenshots of friend list targets"
+    ],
+    "doList": [
+      "Lock your profile photo privacy settings.",
+      "Report profile directly to Meta / X support."
+    ],
+    "dontList": [
+      "Don't leave profile photos accessible to public downloads."
+    ],
+    "whenToReport": "As soon as fake profile is discovered.",
+    "timelineStages": [
+      { "stage": "Photo Harvesting", "description": "Scammer clones public profile info." },
+      { "stage": "Request Blast", "description": "Friend requests sent to victim's contacts." },
+      { "stage": "Takedown", "description": "Platform removes account following reporting." }
+    ],
+    "relatedIncidents": ["account_takeover", "identity_photo_misuse", "online_harassment"]
+  },
+  {
+    "id": "identity_photo_misuse",
+    "title": "Identity & Photo Misuse / Deepfake",
+    "titleMr": "फोटो गैरवापर व डीपफेक",
+    "shortSummary": "Photos manipulated using AI, morphed into explicit content, or used for fraudulent documentation.",
+    "shortSummaryMr": "फोटोमध्ये बदल (मॉर्फिंग) करणे किंवा डीपफेक व्हिडिओ बनवणे.",
+    "riskLevelDefault": "HIGH",
+    "whatIsIt": "Unauthorized alteration, morphing, AI deepfake generation, or misuse of personal photos and identity documents.",
+    "whatIsItMr": "नागरिकांचे फोटो किंवा ओळखपत्रे परवानगीशिवाय वापरणे किंवा एडिट करून ब्लॅकमेल करणे.",
+    "howDoesItHappen": [
+      "Photos downloaded from public social media profiles.",
+      "Morphed using AI nudify tools or combined with obscene media.",
+      "Identity documents (Aadhaar/PAN) used to open fake SIMs or loan accounts."
+    ],
+    "warningSigns": [
+      "Unknown contacts sending morphed images with blackmail threats.",
+      "CIBIL credit report showing unknown loan applications."
+    ],
+    "possibleImpact": [
+      "Severe emotional distress.",
+      "Identity theft and unauthorized liabilities."
+    ],
+    "victimActionSteps": [
+      "File an urgent complaint on cybercrime.gov.in under 'Women & Children Cyber Crime' or 'Other Cyber Crime'.",
+      "Report to StopNCII.org to prevent distribution of morphed intimate images.",
+      "Check Aadhaar usage on UIDAI portal and SIMs on Sanchar Saathi (tafcop.sancharsaathi.gov.in).",
+      "Contact Cyber Police Station immediately."
+    ],
+    "evidenceToPreserve": [
+      "Original unaltered photo file with metadata",
+      "Morphed/received image files & chat logs",
+      "Phone numbers/handles sending threats"
+    ],
+    "doList": [
+      "Register on StopNCII.org if intimate image misuse is involved.",
+      "File police complaint immediately."
+    ],
+    "dontList": [
+      "Don't engage with blackmailers or pay money.",
+      "Don't delete chat evidence."
+    ],
+    "whenToReport": "Immediately upon discovery.",
+    "timelineStages": [
+      { "stage": "Harvesting", "description": "Images taken from social media or leaked sources." },
+      { "stage": "AI Morphing", "description": "AI software used to fabricate explicit material." },
+      { "stage": "Intervention", "description": "Police and technical takedown mechanisms activated." }
+    ],
+    "relatedIncidents": ["sextortion", "online_harassment", "fake_social_profile"]
+  },
+  {
+    "id": "sextortion",
+    "title": "Sextortion & Video Call Blackmail",
+    "titleMr": "सेक्सटॉर्शन आणि व्हिडिओ कॉल ब्लॅकमेल",
+    "shortSummary": "Blackmail after recording a video call or using morphed images, demanding immediate payment.",
+    "shortSummaryMr": "व्हिडिओ कॉल रेकॉर्ड करून किंवा फोटो एडिट करून पैशांची मागणी.",
+    "riskLevelDefault": "HIGH",
+    "whatIsIt": "Blackmailers trick victims into video calls, record explicit clips (often played from pre-recorded videos), or use morphed images to extort money under threat of sharing with family.",
+    "whatIsItMr": "अनोळखी व्हिडिओ कॉलद्वारे किंवा फोटो मॉर्फ करून सोशल मीडियावर टाकण्याची धमकी देऊन पैसे उकळणे.",
+    "howDoesItHappen": [
+      "Friend request on Facebook/Instagram/WhatsApp from attractive unknown profile.",
+      "Video call initiated; victim's face recorded while explicit video plays on scammer's end.",
+      "Minutes later, screenshot sent showing victim's face next to explicit content with demands for UPI payment."
+    ],
+    "warningSigns": [
+      "Unknown video calls from unverified profiles.",
+      "Immediate threats to share screenshots with your Facebook friends list."
+    ],
+    "possibleImpact": [
+      "Trauma, extreme anxiety, and fear.",
+      "Repeated extortion demands (paying never stops the demands)."
+    ],
+    "victimActionSteps": [
+      "DO NOT PAY — Payment will NEVER satisfy blackmailers; they will ask for more.",
+      "Disconnect and block the caller on all platforms immediately.",
+      "Deactivate your Facebook/Instagram profile temporarily to prevent scammers from accessing your friends list.",
+      "Preserve chat screenshots and call logs.",
+      "Call 1930 and file a complaint on cybercrime.gov.in.",
+      "Remember: You are the victim of a crime; do not blame yourself."
+    ],
+    "evidenceToPreserve": [
+      "Screenshots of threat messages",
+      "UPI IDs / Bank accounts demanded for payment",
+      "Phone numbers / WhatsApp handles used"
+    ],
+    "doList": [
+      "Block blackmailers instantly without arguing.",
+      "Report to 1930 Helpline.",
+      "Seek support from trusted family/friends or counsellors."
+    ],
+    "dontList": [
+      "NEVER pay any money.",
+      "Don't delete evidence before taking screenshots.",
+      "Don't blame yourself."
+    ],
+    "whenToReport": "Immediately — early police intervention breaks the extortion cycle.",
+    "timelineStages": [
+      { "stage": "Trap Call", "description": "Victim answers unknown video call." },
+      { "stage": "Screen Recording", "description": "Face recorded alongside pre-recorded media." },
+      { "stage": "Extortion Demand", "description": "Demands sent via WhatsApp with contact lists." },
+      { "stage": "Police Shielding", "description": "Cyber police advise block & intervene legally." }
+    ],
+    "relatedIncidents": ["identity_photo_misuse", "online_harassment"]
+  },
+  {
+    "id": "online_harassment",
+    "title": "Online Harassment & Cyberstalking",
+    "titleMr": "ऑनलाईन छळ आणि सायबर स्टॉकिंग",
+    "shortSummary": "Persistent offensive messages, threats, cyberstalking, or abusive comments.",
+    "shortSummaryMr": "सतत त्रासदायक मेसेज, धमक्या आणि ऑनलाईन पाठलाग करणे.",
+    "riskLevelDefault": "MEDIUM",
+    "whatIsIt": "Repeated unwelcome messages, stalking, threats of violence, or targeted abuse across social media, messaging apps, or email.",
+    "whatIsItMr": "सोशल मीडिया किंवा मेसेजद्वारे सातत्याने होणारा मानसिक छळ.",
+    "howDoesItHappen": [
+      "Stalker creating multiple fake profiles as quickly as they are blocked.",
+      "Targeted harassment in comment sections or private groups.",
+      "Doxxing (publishing private phone numbers and home addresses online)."
+    ],
+    "warningSigns": [
+      "Persistent contact from unknown accounts despite repeated blocking.",
+      "Messages showing intimate knowledge of your daily routines or location."
+    ],
+    "possibleImpact": [
+      "Psychological stress.",
+      "Threat to personal physical safety."
+    ],
+    "victimActionSteps": [
+      "Document everything — take full-screen screenshots including timestamps and URLs.",
+      "Block the harasser across platforms.",
+      "Adjust social media privacy settings to private.",
+      "File a complaint on cybercrime.gov.in and visit nearest Women Helpline / Cyber Police Station."
+    ],
+    "evidenceToPreserve": [
+      "Screenshots of all harassment messages & comments",
+      "Profile URLs of offending accounts",
+      "Call recordings if phone harassment is involved"
+    ],
+    "doList": [
+      "Keep detailed record of every incident.",
+      "Report to local police if physical safety is threatened."
+    ],
+    "dontList": [
+      "Don't respond or engage in arguments with stalkers.",
+      "Don't share real-time location check-ins publicly."
+    ],
+    "whenToReport": "When harassment is repeated or includes explicit threats.",
+    "timelineStages": [
+      { "stage": "Unwanted Contact", "description": "Initial inappropriate messages." },
+      { "stage": "Pattern of Stalking", "description": "Persistent attempts across multiple accounts." },
+      { "stage": "Legal Protection", "description": "Police notice issued under IT Act & BNS provisions." }
+    ],
+    "relatedIncidents": ["sextortion", "fake_social_profile", "identity_photo_misuse"]
+  },
+  {
+    "id": "job_scam",
+    "title": "Fake Job & Work-From-Home Scam",
+    "titleMr": "बनावट नोकरी व वर्क-फॉर्म-होम फसवणूक",
+    "shortSummary": "Promised high daily income for liking YouTube videos, rating hotels, or data entry after paying fees.",
+    "shortSummaryMr": "युट्यूब व्हिडिओ लाईक करणे किंवा रेटिंग देण्याच्या नावाने पैसे उकळणे.",
+    "riskLevelDefault": "HIGH",
+    "whatIsIt": "Fraudulent job offers promising easy work-from-home income (YouTube likes, Google ratings, Telegram tasks) that demand 'prepaid task investments' to unlock earnings.",
+    "whatIsItMr": "घरबसल्या कामाच्या नावाखाली टास्क देऊन नंतर टप्प्याटप्प्याने पैसे उकळणे.",
+    "howDoesItHappen": [
+      "Unsolicited WhatsApp/Telegram message offering Rs. 2,000–5,000 per day for simple tasks.",
+      "Initial small payout (Rs. 150–500) given for 3 video likes to build trust.",
+      "Victim added to 'Prepaid Task Group' requiring Rs. 5,000 to Rs. 50,000 deposit to unlock 'VIP commission'.",
+      "Withdrawal blocked claiming 'tax penalty' or 'system error'."
+    ],
+    "warningSigns": [
+      "Job offers coming via WhatsApp/Telegram from foreign numbers (+63, +62, +234).",
+      "Requirement to pay money to receive salary or work allocation.",
+      "No interview, formal offer letter, or official company email address."
+    ],
+    "possibleImpact": [
+      "Severe financial loss.",
+      "Personal data leakage."
+    ],
+    "victimActionSteps": [
+      "Stop paying task fees immediately.",
+      "Call 1930 Helpline.",
+      "File a complaint on cybercrime.gov.in.",
+      "Report Telegram/WhatsApp groups as fraud."
+    ],
+    "evidenceToPreserve": [
+      "Bank transfer receipts to task accounts",
+      "Telegram chat history export",
+      "Screenshots of fake job portals showing 'frozen balance'"
+    ],
+    "doList": [
+      "Verify legitimate job postings on official career portals.",
+      "Remember real employers never demand task security deposits."
+    ],
+    "dontList": [
+      "Never pay money to get a job.",
+      "Don't trust easy money claims."
+    ],
+    "whenToReport": "Immediately when withdrawal is refused or money demanded.",
+    "timelineStages": [
+      { "stage": "Bait Message", "description": "WhatsApp task offer received." },
+      { "stage": "Trust Payout", "description": "Rs. 200 credited for first 3 likes." },
+      { "stage": "Prepaid Trap", "description": "Victim deposits Rs. 20k, 50k for high returns." },
+      { "stage": "Lockout", "description": "Scammer disappears with total funds." }
+    ],
+    "relatedIncidents": ["investment_scam", "financial_fraud"]
+  },
+  {
+    "id": "shopping_fraud",
+    "title": "Online Shopping & Marketplace Fraud",
+    "titleMr": "ऑनलाईन शॉपिंग व ओएलएक्स फसवणूक",
+    "shortSummary": "Fake shopping websites, fake OLX buyers/sellers, non-delivery of items ordered online.",
+    "shortSummaryMr": "बनावट शॉपिंग साईट्स किंवा वस्तू न मिळणे.",
+    "riskLevelDefault": "MEDIUM",
+    "whatIsIt": "Fraudulent online stores or classified ad scams (OLX/Quikr) selling electronics/vehicles at unbelievable discounts or fake buyers sending QR codes.",
+    "whatIsItMr": "सवलतीच्या नावाने बनावट वस्तू दाखवून पैसे उकळणे किंवा सामान न पाठवणे.",
+    "howDoesItHappen": [
+      "Instagram ads featuring iPhones/branded shoes at 80% discount.",
+      "OLX seller posing as Army Officer selling car/bike urgently due to transfer.",
+      "Advance 'army gate pass' or 'courier fee' requested before delivery."
+    ],
+    "warningSigns": [
+      "Prices unrealistically lower than market price.",
+      "Payment demanded only via UPI/IMPS before seeing the item.",
+      "Seller claiming to be Army/Police personnel as proof of trust."
+    ],
+    "possibleImpact": [
+      "Financial loss.",
+      "Defective/fake products delivered."
+    ],
+    "victimActionSteps": [
+      "Call 1930 helpline if UPI payment made within last few hours.",
+      "Report online shopping URL on cybercrime.gov.in.",
+      "File complaint on National Consumer Helpline (consumerhelpline.gov.in)."
+    ],
+    "evidenceToPreserve": [
+      "Order confirmation email & SMS",
+      "UPI payment receipt & seller phone number",
+      "Website URL & Instagram advertisement screenshots"
+    ],
+    "doList": [
+      "Use Cash on Delivery (COD) for unknown shopping portals.",
+      "Inspect items in person on marketplace apps before paying."
+    ],
+    "dontList": [
+      "Never pay advance token money on OLX without seeing product.",
+      "Don't trust military ID cards shared on WhatsApp — they are forged."
+    ],
+    "whenToReport": "When delivery fails or seller blocks your calls.",
+    "timelineStages": [
+      { "stage": "Ad Exposure", "description": "Attractive discount ad seen." },
+      { "stage": "Advance Payment", "description": "Token/shipping fee sent via UPI." },
+      { "stage": "Ghosting", "description": "Seller turns off phone." }
+    ],
+    "relatedIncidents": ["upi_fraud", "financial_fraud", "phishing"]
+  },
+  {
+    "id": "loan_app_fraud",
+    "title": "Illegal Loan App Harassment",
+    "titleMr": "बेकायदेशीर लोन ॲप त्रास",
+    "shortSummary": "Instant loan apps charging 50% interest and threatening contacts with morphed images.",
+    "shortSummaryMr": "बेकायदेशीर लोन ॲप्सद्वारे होणारा छळ व वसुली.",
+    "riskLevelDefault": "HIGH",
+    "whatIsIt": "Unapproved micro-loan apps that steal contacts and gallery photos upon installation, disbursing tiny loans and harassing victims with morphed images for illegal recovery.",
+    "whatIsItMr": "फोनमधील कॉन्टॅक्ट्स व फोटो चोरून ब्लॅकमेल करणारे अवैध कर्ज ॲप्स.",
+    "howDoesItHappen": [
+      "Ad promising instant Rs. 10,000 loan without paperwork.",
+      "App asks for permissions: Contacts, Camera, Storage.",
+      "Only Rs. 3,500 credited; after 7 days, demands Rs. 10,000 repayment.",
+      "If unpaid, morphed photos sent to victim's entire contact list."
+    ],
+    "warningSigns": [
+      "App not listed on Google Play Store or published by unknown developers.",
+      "Demands permission to read contacts and photos.",
+      "7-day repayment timeline with extortionate processing charges."
+    ],
+    "possibleImpact": [
+      "Extreme emotional abuse and social harassment.",
+      "Contact list privacy breach."
+    ],
+    "victimActionSteps": [
+      "Uninstall the malicious loan app immediately.",
+      "Revoke app permissions in your Android phone settings.",
+      "Inform contacts via SMS/Status about fake loan app harassment.",
+      "File complaint on cybercrime.gov.in and report app to RBI Sachet portal (sachet.rbi.org.in)."
+    ],
+    "evidenceToPreserve": [
+      "App APK/Name and Play Store link",
+      "Bank statement showing loan credit and repayment demands",
+      "WhatsApp extortion messages & threat screenshots"
+    ],
+    "doList": [
+      "Check if loan app is registered on RBI approved NBFC list.",
+      "Report illegal recovery agents to Cyber Police."
+    ],
+    "dontList": [
+      "Never take a new loan from another app to pay off the first.",
+      "Don't give gallery or contact permissions to loan apps."
+    ],
+    "whenToReport": "Immediately upon receiving first threat message.",
+    "timelineStages": [
+      { "stage": "App Install", "description": "Victim grants full phone permissions." },
+      { "stage": "Auto Credit", "description": "Small partial amount credited automatically." },
+      { "stage": "Extortion Phase", "description": "Morphed threats sent to victim's family contacts." }
+    ],
+    "relatedIncidents": ["malware_apk", "identity_photo_misuse", "sextortion"]
+  },
+  {
+    "id": "malware_apk",
+    "title": "Malicious APK & Screen-Share Fraud",
+    "titleMr": "मालवेअर ॲप व स्क्रीन शेअरिंग फसवणूक",
+    "shortSummary": "Apps installed via WhatsApp (.apk files) or screen-sharing tools (AnyDesk/TeamViewer) stealing banking PINs.",
+    "shortSummaryMr": "व्हॉट्सॲपवरून डाऊनलोड केलेले बनावट ॲप किंवा स्क्रीन शेअरिंगद्वारे चोरी.",
+    "riskLevelDefault": "HIGH",
+    "whatIsIt": "Installation of unauthorized Android package (.apk) files disguised as reward apps, electricity bill updates, or screen-sharing apps that grant full phone control to scammers.",
+    "whatIsItMr": "अनोळखी ॲपद्वारे मोबाईलचा पूर्ण ताबा घेऊन बँकेचे मेसेज व पासवर्ड चोरणे.",
+    "howDoesItHappen": [
+      "Caller guides victim to install AnyDesk, RustDesk, or TeamViewer QuickSupport.",
+      "Victim asked to read out 9-digit remote control code.",
+      "Or scammer sends APK file via WhatsApp claiming to be 'PM Yojana' or 'RTO Tax update'.",
+      "App intercepts banking SMS OTPs in the background."
+    ],
+    "warningSigns": [
+      "Caller insisting you download a specific app from a link instead of Play Store.",
+      "Asking you to share a 9-digit screen code or enable Accessibility permissions.",
+      "Phone screen flashing or operating on its own."
+    ],
+    "possibleImpact": [
+      "Complete compromise of bank accounts, UPI, and personal data.",
+      "Real-time SMS interception."
+    ],
+    "victimActionSteps": [
+      "Immediately turn on Flight Mode or turn off Wi-Fi/Mobile Data to break remote connection.",
+      "Uninstall suspicious apps (AnyDesk, TeamViewer, or recently downloaded APKs).",
+      "Reset your phone or boot into Safe Mode if app cannot be uninstalled.",
+      "Call bank customer care from ANOTHER phone to block internet banking.",
+      "Dial 1930 and file report on cybercrime.gov.in."
+    ],
+    "evidenceToPreserve": [
+      "APK file name or remote app code",
+      "Phone number of the caller who guided installation",
+      "Bank transaction SMS received"
+    ],
+    "doList": [
+      "Turn off phone data instantly if screen acts hijacked.",
+      "Only install apps from official Google Play / Apple App Store."
+    ],
+    "dontList": [
+      "Never share AnyDesk / TeamViewer codes with caller.",
+      "Never install .apk files sent via WhatsApp."
+    ],
+    "whenToReport": "Immediately — every second phone remains connected increases financial loss risk.",
+    "timelineStages": [
+      { "stage": "App Delivery", "description": "APK sent on WhatsApp or remote app requested." },
+      { "stage": "Access Granted", "description": "Victim enters 9-digit code or grants Accessibility." },
+      { "stage": "Silent OTP Theft", "description": "Scammer executes transfers while intercepting SMS." }
+    ],
+    "relatedIncidents": ["upi_fraud", "financial_fraud", "phishing"]
+  },
+  {
+    "id": "sim_mobile_fraud",
+    "title": "SIM Swap & Mobile Number Fraud",
+    "titleMr": "सीम स्वॅप आणि मोबाईल फसवणूक",
+    "shortSummary": "Duplicate SIM issued in your name to intercept bank OTPs, or illegal SIMs registered on your Aadhaar.",
+    "shortSummaryMr": "तुमच्या नावाने बनावट सीम चालू करणे किंवा ओटीपी ब्लॉक होणे.",
+    "riskLevelDefault": "HIGH",
+    "whatIsIt": "Fraudsters obtain a duplicate SIM card of your mobile number from telecom operators using forged ID documents, disabling your real SIM and capturing all incoming bank OTPs.",
+    "whatIsItMr": "तुमचे सीम कार्ड ब्लॉक करून बनावट कागदपत्रांच्या आधारे नवीन सीम चालू करणे.",
+    "howDoesItHappen": [
+      "Phishing call asking to press 1 for eSIM upgrade or 5G conversion.",
+      "Scammer submits forged ID at telecom store requesting SIM replacement.",
+      "Victim's phone suddenly loses signal ('No Service').",
+      "During signal outage, scammer empties bank account using intercepted SMS OTPs."
+    ],
+    "warningSigns": [
+      "Sudden, unexplained loss of cellular network signal for extended hours.",
+      "SMS alerts about 'SIM Swap request initiated' from your telecom provider."
+    ],
+    "possibleImpact": [
+      "Complete loss of 2FA protection across bank accounts and email.",
+      "Unauthorized transactions."
+    ],
+    "victimActionSteps": [
+      "If mobile signal disappears unexpectedly, contact your telecom customer care (198) from another phone immediately to check SIM status.",
+      "If SIM swap has occurred, block the SIM card instantly.",
+      "Inform your bank to temporarily freeze net banking access.",
+      "Check mobile numbers registered in your name on DoT Sanchar Saathi portal (tafcop.sancharsaathi.gov.in).",
+      "Report to 1930 and cybercrime.gov.in."
+    ],
+    "evidenceToPreserve": [
+      "Telecom SMS notifications",
+      "Timestamp when cellular network signal dropped",
+      "Sanchar Saathi TAFCOP report screenshot"
+    ],
+    "doList": [
+      "Regularly audit registered SIM connections on Sanchar Saathi.",
+      "Act immediately if cellular signal goes dead unexpectedly."
+    ],
+    "dontList": [
+      "Never approve eSIM conversion requests sent via SMS.",
+      "Don't ignore prolonged cellular network outages."
+    ],
+    "whenToReport": "Immediately when SIM signal disappears without reason.",
+    "timelineStages": [
+      { "stage": "Forged Request", "description": "Fake SIM swap lodged at telecom store." },
+      { "stage": "Signal Drop", "description": "Real SIM deactivated; duplicate activated." },
+      { "stage": "Bank Drain", "description": "OTPs intercepted to drain accounts." }
+    ],
+    "relatedIncidents": ["financial_fraud", "account_takeover", "phishing"]
+  },
+  {
+    "id": "crypto_fraud",
+    "title": "Cryptocurrency & Web3 Investment Scams",
+    "titleMr": "क्रिप्टोकरन्सी आणि वेब३ फसवणूक",
+    "shortSummary": "Fake crypto exchanges, P2P trading scams, token rug pulls, or wallet seed phrase theft.",
+    "shortSummaryMr": "बनावट क्रिप्टो एक्स्चेंज आणि वॉलेट हॅकिंग फसवणूक.",
+    "riskLevelDefault": "HIGH",
+    "whatIsIt": "Fraud involving fake cryptocurrency trading sites, deceptive P2P transfers on exchanges, or phishing dApps stealing crypto wallet private keys.",
+    "whatIsItMr": "क्रिप्टोकरन्सीच्या नावाखाली पैसे उकळणे किंवा क्रिप्टो वॉलेट रिकामे करणे.",
+    "howDoesItHappen": [
+      "P2P buyer tricks seller on Binance/WazirX into releasing crypto before bank funds reflect.",
+      "Deceptive DeFi website requesting wallet connect permission that approves unlimited spending allowance.",
+      "Fake Telegram crypto cloud mining bots promising daily Bitcoin payouts."
+    ],
+    "warningSigns": [
+      "P2P buyers offering above-market rates for USDT/BTC.",
+      "DApp asking for your 12-word seed phrase or secret recovery phrase.",
+      "Guaranteed APY returns of 10% daily."
+    ],
+    "possibleImpact": [
+      "Irreversible loss of digital assets and fiat money.",
+      "Bank account frozen due to P2P transactions involving tainted fraud funds."
+    ],
+    "victimActionSteps": [
+      "Revoke smart contract allowances using Revoke.cash or Etherscan Token Approval tool.",
+      "Transfer remaining assets to a fresh hardware/software wallet.",
+      "If bank account frozen due to P2P trade, obtain Cyber Police notice copy from your bank.",
+      "Report on cybercrime.gov.in with wallet addresses and blockchain transaction hashes (TxHash)."
+    ],
+    "evidenceToPreserve": [
+      "Blockchain Transaction Hash (TxHash)",
+      "Sender & Receiver wallet public addresses",
+      "Exchange P2P order receipts and chat exports"
+    ],
+    "doList": [
+      "Only trade crypto on FIU-registered Indian exchanges.",
+      "Keep 12-word recovery seed phrase completely offline on paper."
+    ],
+    "dontList": [
+      "NEVER type your 12-word seed phrase on any website.",
+      "Don't engage in unverified off-market P2P trades."
+    ],
+    "whenToReport": "Immediately after unapproved blockchain transaction.",
+    "timelineStages": [
+      { "stage": "Wallet Approval", "description": "Victim clicks malicious dApp approval." },
+      { "stage": "Token Drain", "description": "Smart contract drains tokens automatically." },
+      { "stage": "Chain Trace", "description": "Police trace blockchain ledger outputs to exchange KYC accounts." }
+    ],
+    "relatedIncidents": ["investment_scam", "phishing", "financial_fraud"]
+  },
+  {
+    "id": "other",
+    "title": "Other Cyber Crime / Unspecified Scams",
+    "titleMr": "इतर सायबर गुन्हे / इतर प्रकार",
+    "shortSummary": "Ransomware, IoT hacking, online gaming fraud, or new emerging digital threats.",
+    "shortSummaryMr": "नवीन प्रकारचे सायबर गुन्हे, रॅन्समवेअर किंवा गेमिंग फसवणूक.",
+    "riskLevelDefault": "MEDIUM",
+    "whatIsIt": "Emerging cyber threats not falling under standard categories, such as ransomware file encryption, online gaming account theft, or smart device hacking.",
+    "whatIsItMr": "इतर कोणत्याही प्रकारची डिजिटल किंवा ऑनलाईन फसवणूक.",
+    "howDoesItHappen": [
+      "Ransomware attached to pirated software encrypting computer files.",
+      "Online gaming account or virtual item theft.",
+      "Uncategorized social engineering tactics."
+    ],
+    "warningSigns": [
+      "Files suddenly ending in strange extensions (.locked, .crypto) with desktop ransom notes.",
+      "Unusual pop-ups or computational slowdowns."
+    ],
+    "possibleImpact": [
+      "Data loss or privacy invasion.",
+      "Financial demands."
+    ],
+    "victimActionSteps": [
+      "Isolate the affected computer/device from network immediately.",
+      "Do NOT pay ransom demands — check NoMoreRansom.org for free decryption tools.",
+      "Consult IT security experts.",
+      "File a report on cybercrime.gov.in under 'Other Cyber Crime'."
+    ],
+    "evidenceToPreserve": [
+      "Ransom note text file / screenshot",
+      "Sample encrypted file copy",
+      "Network IP logs if available"
+    ],
+    "doList": [
+      "Disconnect internet cables and turn off Wi-Fi on infected machines.",
+      "Check NoMoreRansom.org for decryption keys."
+    ],
+    "dontList": [
+      "Never pay cybercriminals for decryption keys.",
+      "Don't delete ransom notes before forensic backup."
+    ],
+    "whenToReport": "As soon as threat or anomaly is detected.",
+    "timelineStages": [
+      { "stage": "Infection", "description": "Device compromised via payload." },
+      { "stage": "Isolation", "description": "Device disconnected from network." },
+      { "stage": "Forensic Remediation", "description": "Decryption attempt & police complaint." }
+    ],
+    "relatedIncidents": ["malware_apk", "phishing", "account_takeover"]
+  }
+]

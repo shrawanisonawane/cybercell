@@ -1,0 +1,91 @@
+[
+  {
+    "id": "scam_digital_arrest",
+    "title": "The 'Digital Arrest' Fake Police Video Call",
+    "titleMr": "'डिजिटल अरेस्ट' आणि बनावट पोलीस व्हिडिओ कॉल",
+    "readTime": "3 min read",
+    "targetAudience": "Senior Citizens, Businessmen, Professionals",
+    "summary": "Scammers pose as CBI or Mumbai Cyber Police officers over WhatsApp/Skype video calls, claiming your Aadhaar was found in a drug parcel or money laundering case, and force you onto continuous video camera supervision until you transfer money.",
+    "summaryMr": "बनावट पोलीस अधिकारी बनकर अंमली पदार्थ किंवा मनी लाँड्रिंगच्या केसची भीती दाखवून पैशांची उकळत करणे.",
+    "howItWorks": [
+      "You receive an IVR phone call claiming your courier (FedEx/DHL) contains illegal passports or drugs.",
+      "The call is transferred to a fake 'Police Officer' wearing a realistic uniform sitting in a background decorated with official seals.",
+      "The fraudster threatens immediate arrest under PMLA/NDPS and orders you to stay on video call ('Digital Arrest') without contacting anyone.",
+      "You are forced to transfer all your savings into 'RBI Clearance Accounts' or 'Secret Verification Accounts' to prove innocence."
+    ],
+    "redFlags": [
+      "Police or CBI demanding money transfer to prove innocence.",
+      "Insisting on continuous video camera surveillance on Skype/WhatsApp.",
+      "Threatening that notifying family will result in immediate jail."
+    ],
+    "realWorldFact": "Law Enforcement agencies (Police, CBI, ED, Narcotics Bureau) NEVER conduct 'Digital Arrests' or demand money transfers over video calls. Any video call demanding money is 100% fake.",
+    "incidentCategory": "investment_scam"
+  },
+  {
+    "id": "scam_youtube_task",
+    "title": "The 'Like YouTube Videos & Earn' Task Scam",
+    "titleMr": "युट्यूब व्हिडिओ लाईक करा आणि कमवा' टास्क फसवणूक",
+    "readTime": "4 min read",
+    "targetAudience": "Students, Homemakers, Job Seekers",
+    "summary": "Victims are recruited on WhatsApp/Telegram for easy work-from-home tasks. After paying a small initial reward, scammers lure them into depositing lakhs under 'Prepaid Crypto Tasks'.",
+    "summaryMr": "घरी बसून युट्यूब लाईक्स किंवा रेटिंग देऊन रोज हजारो रुपये कमवण्याचे बनावट आमिष.",
+    "howItWorks": [
+      "Unsolicited WhatsApp message offering Rs 150 per YouTube video liked.",
+      "You complete 3 simple likes and actually receive Rs 450 in your UPI account to build extreme trust.",
+      "You are added to a Telegram group with 50+ members (mostly fake bot accounts posting false profit screenshots).",
+      "You are instructed to join 'Prepaid VIP Tasks' where depositing Rs 10,000 promises Rs 15,000 return.",
+      "When you try to withdraw your profits, the admin claims your 'score dropped' and demands Rs 50,000 more."
+    ],
+    "redFlags": [
+      "Unsolicited job offers from international WhatsApp numbers (+63, +62).",
+      "Requirement to deposit your own money to unlock earned salary.",
+      "Communication exclusively via Telegram channels."
+    ],
+    "realWorldFact": "No legitimate marketing company asks job seekers to deposit money into personal accounts to receive task commissions.",
+    "incidentCategory": "job_scam"
+  },
+  {
+    "id": "scam_electricity_apk",
+    "title": "The 'Electricity Bill Unpaid - Power Cut Tonight' APK Trap",
+    "titleMr": "लाईट बिल थकबाकी व विजेचे कनेक्शन तोडण्याची भीती दाखवणारी ॲप फसवणूक",
+    "readTime": "3 min read",
+    "targetAudience": "General Public, Householders, Elderly",
+    "summary": "An urgent SMS claims your electricity bill is unpaid and power will be cut at 9:30 PM tonight. Clicking the link downloads an APK app that drains your bank account.",
+    "summaryMr": "वीज बिल न भरल्यास आज रात्री वीज खंडित होईल असा मेसेज पाठवून ॲप डाऊनलोड करायला लावणे.",
+    "howItWorks": [
+      "SMS arrives: 'Dear Consumer your electricity power will be disconnected tonight at 9:30 pm from MSEDCL officer. Call immediately.'",
+      "You call the provided number in panic; the caller asks you to pay Rs 10 via a special app link sent on WhatsApp.",
+      "The link installs a malicious .apk app file (disguised as 'MSEDCL Bill Update').",
+      "The app reads your banking OTPs in the background and clears out your savings."
+    ],
+    "redFlags": [
+      "SMS coming from personal 10-digit phone numbers instead of official Telecom Sender IDs (like VM-MSEDCL).",
+      "Requests to download apps directly via WhatsApp file attachments.",
+      "Threats of power disconnection within hours."
+    ],
+    "realWorldFact": "MSEDCL and electricity distribution boards never send SMS from personal numbers or ask users to download third-party APK files.",
+    "incidentCategory": "malware_apk"
+  },
+  {
+    "id": "scam_olx_army",
+    "title": "The 'Army Officer OLX Bike/Car' Advance Token Trick",
+    "titleMr": "'सैन्य अधिकारी' ओएलएक्स बाईक/कार टोकन फसवणूक",
+    "readTime": "3 min read",
+    "targetAudience": "Marketplace Buyers & Sellers",
+    "summary": "Fraudsters post ads for cars, bikes, or furniture at half price, posing as transferred Army officers who demand advance military gate pass fees before delivery.",
+    "summaryMr": "सैन्य दलात असल्याचा खोटा ओळखपत्र दाखवून अर्ध्या किंमतीत गाडी देण्याच्या नावाने अॅडव्हान्स उकळणे.",
+    "howItWorks": [
+      "Ad on OLX offers a 2022 Royal Enfield or Swift car for an unbelievably cheap price.",
+      "Seller sends a photo of a forged Army ID card and canteen card to establish immediate trust.",
+      "Seller claims the vehicle is parked at the Army Cantonment Gate and requires Rs 3,500 'Army Gate Pass / Courier Charges' via UPI before releasing it.",
+      "Once money is sent, the scammer asks for Rs 10,000 more or switches off the phone."
+    ],
+    "redFlags": [
+      "Seller over-emphasizing their military/police credentials.",
+      "Refusal to meet in person to show the vehicle before taking money.",
+      "Sending QR codes claiming 'scan this to receive advance payment'."
+    ],
+    "realWorldFact": "Indian Armed Forces personnel do not use official military identity cards for commercial sales on classified apps.",
+    "incidentCategory": "shopping_fraud"
+  }
+]

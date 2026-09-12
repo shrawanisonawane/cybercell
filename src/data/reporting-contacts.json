@@ -1,0 +1,110 @@
+{
+  "lastVerifiedGlobal": "2026-09-10",
+  "districtContacts": [
+    {
+      "id": "nashik_city",
+      "district": "Nashik City (नाशिक शहर)",
+      "name": "Nashik City Cyber Police Station",
+      "nameMr": "नाशिक शहर सायबर पोलीस ठाणे",
+      "address": "Gangapur Road, Police Commissionerate Office Campus, Nashik - 422002",
+      "phone": ["0253-2305226", "0253-2305200", "0253-2305201"],
+      "email": "cybercell.nashik@mahapolice.gov.in",
+      "officialUrl": "https://nashikpolice.gov.in",
+      "lastVerified": "2026-09-10"
+    },
+    {
+      "id": "mumbai_city",
+      "district": "Mumbai City (मुंबई)",
+      "name": "BKC Cyber Police Station, Mumbai",
+      "nameMr": "बीकेसी सायबर पोलीस ठाणे, मुंबई",
+      "address": "BKC Police Station Bldg, Bandra Kurla Complex, Mumbai - 400051",
+      "phone": ["022-26504008"],
+      "email": "cybercell.mumbai@mahapolice.gov.in",
+      "officialUrl": "https://mumbaipolice.gov.in",
+      "lastVerified": "2026-09-10"
+    },
+    {
+      "id": "pune_city",
+      "district": "Pune City (पुणे शहर)",
+      "name": "Pune City Cyber Police Station",
+      "nameMr": "पुणे शहर सायबर पोलीस ठाणे",
+      "address": "Shivajinagar Police Lines, Pune - 411005",
+      "phone": ["020-29710097"],
+      "email": "cybercrime.pune@mahapolice.gov.in",
+      "officialUrl": "https://punepolice.gov.in",
+      "lastVerified": "2026-09-10"
+    },
+    {
+      "id": "nagpur_city",
+      "district": "Nagpur City (नागपूर शहर)",
+      "name": "Nagpur Cyber Cell",
+      "nameMr": "नागपूर शहर सायबर सेल",
+      "address": "CP Office Premises, Civil Lines, Nagpur - 440001",
+      "phone": ["0712-2566766"],
+      "email": "cybercrime.nagpur@mahapolice.gov.in",
+      "officialUrl": "https://nagpurpolice.gov.in",
+      "lastVerified": "2026-09-10"
+    },
+    {
+      "id": "thane_city",
+      "district": "Thane City (ठाणे)",
+      "name": "Thane City Cyber Cell",
+      "nameMr": "ठाणे सायबर पोलीस ठाणे",
+      "address": "Khapatdeo, Police Commissionerate, Thane - 400601",
+      "phone": ["022-25443376"],
+      "email": "cybercell.thane@mahapolice.gov.in",
+      "officialUrl": "https://thanepolice.gov.in",
+      "lastVerified": "2026-09-10"
+    },
+    {
+      "id": "sambhajinagar",
+      "district": "Chhatrapati Sambhajinagar (छत्रपती संभाजीनगर)",
+      "name": "Chhatrapati Sambhajinagar Cyber Cell",
+      "nameMr": "छत्रपती संभाजीनगर सायबर पोलीस ठाणे",
+      "address": "Mill Corner, Police Commissionerate, Chhatrapati Sambhajinagar - 431001",
+      "phone": ["0240-2240500"],
+      "email": "cybercell.aurangabad@mahapolice.gov.in",
+      "officialUrl": "https://aurangabadpolice.gov.in",
+      "lastVerified": "2026-09-10"
+    }
+  ],
+  "nationalHelpline": {
+    "number": "1930",
+    "title": "National Cyber Crime Helpline (24x7)",
+    "titleMr": "राष्ट्रीय सायबर गुन्हे हेल्पलाइन (२४x७)",
+    "operatingAgency": "Indian Cyber Crime Coordination Centre (I4C), MHA",
+    "description": "Call immediately for financial fraud to freeze funds in transit.",
+    "descriptionMr": "आर्थिक फसवणूक झाल्यास ट्रान्झिटमधील पैसे गोठवण्यासाठी त्वरित १९३० वर कॉल करा.",
+    "portalUrl": "https://cybercrime.gov.in",
+    "lastVerified": "2026-09-10"
+  },
+  "grmPortals": [
+    {
+      "id": "ncrp",
+      "title": "National Cyber Crime Reporting Portal (NCRP)",
+      "titleMr": "राष्ट्रीय सायबर गुन्हे नोंदणी पोर्टल",
+      "url": "https://cybercrime.gov.in",
+      "purpose": "Official national portal for filing cyber crime FIRs online.",
+      "purposeMr": "सायबर गुन्ह्यांची ऑनलाईन तक्रार नोंदवण्यासाठी शासकीय पोर्टल.",
+      "stage": "Stage 1 — Primary Filing"
+    },
+    {
+      "id": "rbi_ombudsman",
+      "title": "RBI Integrated Ombudsman Scheme ('One Nation One Ombudsman')",
+      "titleMr": "आरबीआय एकात्मिक लोकपाल योजना",
+      "url": "https://cms.rbi.org.in",
+      "purpose": "Escalation pathway for unresolved banking fraud grievances.",
+      "purposeMr": "बँकेने ३० दिवसांत निवारण न केल्यास लोकपालकडे तक्रार मागावी.",
+      "stage": "Stage 3 — Escalation"
+    },
+    {
+      "id": "sanchar_saathi",
+      "title": "Sanchar Saathi Portal (DoT)",
+      "titleMr": "संचार साथी पोर्टल (दूरसंचार विभाग)",
+      "url": "https://sancharsaathi.gov.in",
+      "purpose": "Block lost/stolen mobile phones (CEIR) and check SIMs.",
+      "purposeMr": "चोरी झालेले फोन ब्लॉक करणे व सीम तपासणे.",
+      "stage": "Stage 4 — Mobile Security"
+    }
+  ]
+}

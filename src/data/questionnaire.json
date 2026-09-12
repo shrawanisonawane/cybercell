@@ -1,0 +1,252 @@
+{
+  "startQuestionId": "q1_main",
+  "questions": {
+    "q1_main": {
+      "id": "q1_main",
+      "question": "What best describes what happened?",
+      "questionMr": "तुमच्यासोबत नेमके काय घडले ते निवडा?",
+      "subtext": "Select the option that closest fits your experience. No technical jargon required.",
+      "subtextMr": "तुमच्या अनुभवाशी जवळीक साधणारा पर्याय निवडा.",
+      "options": [
+        {
+          "label": "Money was taken from my bank account, UPI, or card without my knowledge",
+          "labelMr": "माझ्या संमतीशिवाय माझ्या खात्यातून/यूपीआयमधून पैसे गेले",
+          "next": "q2_unauth_money"
+        },
+        {
+          "label": "Someone contacted me and asked/tricked me into sending money",
+          "labelMr": "कोणीतरी मला संपर्क करून पैसे पाठवण्यास सांगितले/फसवले",
+          "next": "q2_asked_money"
+        },
+        {
+          "label": "My social media or WhatsApp account was hacked / I cannot log in",
+          "labelMr": "माझे सोशल मीडिया किंवा व्हॉट्सॲप खाते हॅक झाले आहे",
+          "next": "q2_hacked"
+        },
+        {
+          "label": "Someone created a fake profile using my photo or name",
+          "labelMr": "माझा फोटो किंवा नाव वापरून कोणीतरी बनावट प्रोफाईल बनवले आहे",
+          "next": "q2_fake_profile"
+        },
+        {
+          "label": "I clicked a suspicious link received via SMS, WhatsApp, or email",
+          "labelMr": "मला मेसेज/व्हॉट्सॲपवर आलेली संशयास्पद लिंक मी क्लिक केली",
+          "next": "q2_phishing_link"
+        },
+        {
+          "label": "I installed an app from WhatsApp / website or shared my phone screen",
+          "labelMr": "मी व्हॉट्सॲपवरून ॲप डाऊनलोड केले किंवा फोनची स्क्रीन शेअर केली",
+          "next": "q2_malware_app"
+        },
+        {
+          "label": "Someone is threatening, extortioning, or blackmailing me",
+          "labelMr": "कोणीतरी मला धमकी, ब्लॅकमेल किंवा त्रास देत आहे",
+          "next": "q2_blackmail"
+        },
+        {
+          "label": "I was promised high returns on stock market / forex / crypto investment",
+          "labelMr": "मला शेअर बाजार/क्रिप्टो गुंतवणुकीवर मोठ्या परताव्याचे आमिष दिले",
+          "resultId": "investment_scam",
+          "riskOverride": "HIGH",
+          "reasonTemplate": "You were lured into an investment or trading scheme promising high guaranteed returns."
+        },
+        {
+          "label": "I was offered a fake part-time job or work-from-home task",
+          "labelMr": "मला बनावट नोकरी किंवा वर्क-फॉर्म-होम टास्कची ऑफर दिली",
+          "resultId": "job_scam",
+          "riskOverride": "HIGH",
+          "reasonTemplate": "You were targeted by a fake job/prepaid task scheme demanding deposits."
+        },
+        {
+          "label": "Something else or I am not sure",
+          "labelMr": "इतर किंवा मला नक्की सांगता येत नाही",
+          "resultId": "other",
+          "riskOverride": "MEDIUM",
+          "reasonTemplate": "Your description falls into general cyber security concerns."
+        }
+      ]
+    },
+    "q2_unauth_money": {
+      "id": "q2_unauth_money",
+      "question": "How was the transaction carried out?",
+      "questionMr": "हा व्यवहार कसा झाला?",
+      "options": [
+        {
+          "label": "Via UPI (QR Code, Collect Request, or UPI App)",
+          "labelMr": "यूपीआय द्वारे (क्यूआर कोड, कलेक्ट रिक्वेस्ट किंवा ॲप)",
+          "resultId": "upi_fraud",
+          "riskOverride": "HIGH",
+          "reasonTemplate": "Unauthorized debit occurred via UPI channel without your genuine authorization."
+        },
+        {
+          "label": "Via Net Banking, Credit Card, Debit Card, or ATM debit",
+          "labelMr": "नेट बँकिंग, क्रेडिट/डेबिट कार्ड किंवा एटीएम द्वारे",
+          "resultId": "financial_fraud",
+          "riskOverride": "HIGH",
+          "reasonTemplate": "Unauthorized debit occurred via bank transfer, card credentials, or ATM gateway."
+        },
+        {
+          "label": "After I installed a remote-sharing app (AnyDesk/TeamViewer) or APK file",
+          "labelMr": "स्क्रीन शेअरिंग ॲप किंवा व्हॉट्सॲप ॲप इन्स्टॉल केल्यानंतर",
+          "resultId": "malware_apk",
+          "riskOverride": "HIGH",
+          "reasonTemplate": "Screen-sharing software or malicious APK intercepted your banking OTPs in real-time."
+        },
+        {
+          "label": "My mobile phone network signal suddenly dropped and stayed dead",
+          "labelMr": "माझ्या मोबाईलचे नेटवर्क अचानक गायब झाले आणि बंद पडले",
+          "resultId": "sim_mobile_fraud",
+          "riskOverride": "HIGH",
+          "reasonTemplate": "Your SIM card was likely swapped via telecom fraud to intercept bank OTPs."
+        }
+      ]
+    },
+    "q2_asked_money": {
+      "id": "q2_asked_money",
+      "question": "What was the context under which money was requested?",
+      "questionMr": "कोणत्या कारणासाठी पैसे मागितले गेले?",
+      "options": [
+        {
+          "label": "Investments, Trading returns, or Digital Arrest threat by police call",
+          "labelMr": "शेअर मार्केट गुंतवणूक किंवा बनावट पोलीस अधिकाऱ्यांचा 'डिजिटल अरेस्ट' कॉल",
+          "resultId": "investment_scam",
+          "riskOverride": "HIGH",
+          "reasonTemplate": "Classic investment fraud or fake police extortion ('Digital Arrest')."
+        },
+        {
+          "label": "Work-from-home job tasks (YouTube likes, Google ratings, prepaid tasks)",
+          "labelMr": "वर्क-फॉर्म-होम टास्क (युट्यूब लाईक्स, रेटिंग्ज किंवा टास्क)",
+          "resultId": "job_scam",
+          "riskOverride": "HIGH",
+          "reasonTemplate": "Prepaid job task scam disguised as daily income opportunities."
+        },
+        {
+          "label": "Buying or selling an item on OLX / Marketplace / Instagram store",
+          "labelMr": "ओएलएक्स किंवा ऑनलाईन शॉपिंग साईटवरून खरेदी/विक्री करताना",
+          "resultId": "shopping_fraud",
+          "riskOverride": "MEDIUM",
+          "reasonTemplate": "Marketplace fraud or non-delivery of items ordered online."
+        },
+        {
+          "label": "Threat to publish photos / video call blackmail",
+          "labelMr": "फोटो व्हायरल करण्याची किंवा व्हिडिओ कॉलद्वारे ब्लॅकमेल करण्याची धमकी",
+          "resultId": "sextortion",
+          "riskOverride": "HIGH",
+          "reasonTemplate": "Sextortion and video call blackmail demanding urgent money transfers."
+        },
+        {
+          "label": "Illegal instant loan app demanding repayment with high interest",
+          "labelMr": "बेकायदेशीर लोन ॲपद्वारे जास्त व्याजासह वसुलीची धमकी",
+          "resultId": "loan_app_fraud",
+          "riskOverride": "HIGH",
+          "reasonTemplate": "Unapproved micro-loan app extortion and contact list harassment."
+        }
+      ]
+    },
+    "q2_hacked": {
+      "id": "q2_hacked",
+      "question": "Are your contacts receiving messages from your hacked account?",
+      "questionMr": "तुमच्या हॅक झालेल्या अकाऊंटवरून नातेवाईकांना मेसेज जात आहेत का?",
+      "options": [
+        {
+          "label": "Yes, my friends are receiving urgent requests asking for money via UPI",
+          "labelMr": "होय, मित्रांना तातडीने पैसे पाठवण्याचे मेसेज जात आहेत",
+          "resultId": "account_takeover",
+          "riskOverride": "HIGH",
+          "reasonTemplate": "Active account breach with live social impersonation scamming your contacts."
+        },
+        {
+          "label": "No, but I cannot log in and my password/email was changed",
+          "labelMr": "नाही, पण मला लॉगीन करता येत नाहीये आणि पासवर्ड बदलला आहे",
+          "resultId": "account_takeover",
+          "riskOverride": "MEDIUM",
+          "reasonTemplate": "Unauthorized password reset and account takeover detected."
+        }
+      ]
+    },
+    "q2_fake_profile": {
+      "id": "q2_fake_profile",
+      "question": "Is the fake profile being used to ask people for money or harass you?",
+      "questionMr": "बनावट प्रोफाईलवरून लोकांकडे पैसे मागितले जात आहेत का?",
+      "options": [
+        {
+          "label": "Yes, it is messaging my friends asking for money or spreading rumors",
+          "labelMr": "होय, नातेवाईकांना पैसे मागितले जात आहेत किंवा अफवा पसरवल्या जात आहेत",
+          "resultId": "fake_social_profile",
+          "riskOverride": "HIGH",
+          "reasonTemplate": "Active impersonation profile targeting your contact list."
+        },
+        {
+          "label": "No, I just noticed a duplicate account created with my photos",
+          "labelMr": "नाही, फक्त माझ्या फोटोंचा वापर करून ड्युप्लिकेट अकाऊंट बनवले आहे",
+          "resultId": "fake_social_profile",
+          "riskOverride": "MEDIUM",
+          "reasonTemplate": "Duplicate profile created without permission."
+        }
+      ]
+    },
+    "q2_phishing_link": {
+      "id": "q2_phishing_link",
+      "question": "Did you enter any password, OTP, or card details after clicking the link?",
+      "questionMr": "लिंकवर क्लिक केल्यावर तुम्ही पासवर्ड, ओटीपी किंवा कार्ड डिटेल्स टाकले का?",
+      "options": [
+        {
+          "label": "Yes, I entered my bank login, password, OTP, or Aadhaar details",
+          "labelMr": "होय, मी पासवर्ड, ओटीपी किंवा बँक माहिती भरली",
+          "resultId": "phishing",
+          "riskOverride": "HIGH",
+          "reasonTemplate": "Credentials compromised on a phishing portal. Immediate password reset & bank alert required!"
+        },
+        {
+          "label": "No, I only opened the website page but closed it without typing anything",
+          "labelMr": "नाही, मी फक्त पेज उघडले पण काहीही माहिती भरली नाही",
+          "resultId": "phishing",
+          "riskOverride": "LOW",
+          "reasonTemplate": "Phishing link visited without credential entry. Risk is low, but monitor your device."
+        }
+      ]
+    },
+    "q2_malware_app": {
+      "id": "q2_malware_app",
+      "question": "Did you notice any unauthorized bank deductions or phone screen flickering?",
+      "questionMr": "फोनमध्ये अनधिकृत बँक व्यवहार किंवा स्क्रीन आपोआप चालताना दिसली का?",
+      "options": [
+        {
+          "label": "Yes, money was debited or screen was being operated remotely",
+          "labelMr": "होय, पैसे कापले गेले किंवा स्क्रीन रीमोटली चालवली जात होती",
+          "resultId": "malware_apk",
+          "riskOverride": "HIGH",
+          "reasonTemplate": "Device actively compromised by remote desktop app or malicious APK payload."
+        },
+        {
+          "label": "No, but I installed the APK file and want to know how to safely remove it",
+          "labelMr": "नाही, पण मी ॲप डाऊनलोड केले आहे आणि सुरक्षितपणे काढायचे आहे",
+          "resultId": "malware_apk",
+          "riskOverride": "MEDIUM",
+          "reasonTemplate": "Potentially unsafe APK package present on device."
+        }
+      ]
+    },
+    "q2_blackmail": {
+      "id": "q2_blackmail",
+      "question": "Does the threat involve intimate video call recordings or morphed photos?",
+      "questionMr": "धमकीमध्ये व्हिडिओ कॉल रेकॉर्डिंग किंवा एडिट केलेले फोटो आहेत का?",
+      "options": [
+        {
+          "label": "Yes, I am being blackmailed with video call clips or morphed photos",
+          "labelMr": "होय, व्हिडिओ कॉल क्लिप किंवा फोटोंद्वारे ब्लॅकमेल केले जात आहे",
+          "resultId": "sextortion",
+          "riskOverride": "HIGH",
+          "reasonTemplate": "Sextortion blackmail attempt. Do NOT pay. Disconnect and report immediately."
+        },
+        {
+          "label": "No, it is continuous abuse, stalker messages, or threats of physical harm",
+          "labelMr": "नाही, सततचा मानसिक छळ, मेसेज किंवा धमक्या आहेत",
+          "resultId": "online_harassment",
+          "riskOverride": "HIGH",
+          "reasonTemplate": "Cyberstalking and targeted online harassment."
+        }
+      ]
+    }
+  }
+}

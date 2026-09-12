@@ -1,0 +1,32 @@
+[
+  {
+    "question": "What is the 1930 Helpline and what is the 'Golden Hour'?",
+    "questionMr": "१९३० हेल्पलाइन काय आहे आणि 'गोल्डन अवर' म्हणजे काय?",
+    "answer": "1930 is India's National Cyber Crime Helpline managed by the Indian Cyber Crime Coordination Centre (I4C). The 'Golden Hour' refers to the first 1 to 2 hours immediately after an unauthorized financial transaction. Calling 1930 within this window gives authorities the highest probability of freezing funds in transit through the Citizen Financial Cyber Fraud Reporting & Management System (CFCFRMS).",
+    "answerMr": "१९३० ही राष्ट्रीय सायबर गुन्हे हेल्पलाइन आहे. फसवणूक झाल्यानंतरच्या पहिल्या १ ते २ तासांना 'गोल्डन अवर' म्हणतात. या वेळात १९३० वर कॉल केल्यास बँक खात्यातील ट्रान्झिटमध्ये असलेले पैसे ब्लॉक होण्याचे प्रमाण जास्त असते."
+  },
+  {
+    "question": "Will filing an online complaint on cybercrime.gov.in automatically register an FIR?",
+    "questionMr": "cybercrime.gov.in वर तक्रार नोंदवल्यावर एफआयआर आपोआप दाखल होतो का?",
+    "answer": "Complaints filed on cybercrime.gov.in are routed directly to your local district Cyber Police Station. The police officials examine the evidence submitted, issue acknowledgment numbers, and convert serious financial or criminal matters into formal FIRs.",
+    "answerMr": "पोर्टलवरील तक्रार तुमच्या स्थानिक सायबर पोलीस स्टेशनकडे पाठवली जाते. पोलीस पुराव्यांची तपासणी करून आवश्यकतेनुसार अधिकृत एफआयआर दाखल करतात."
+  },
+  {
+    "question": "What should I do if my bank refuses to compensate for unauthorized fraud?",
+    "questionMr": "बँकेने अनधिकृत फसवणुकीची नुकसानभरपाई देण्यास नकार दिल्यास काय करावे?",
+    "answer": "Under RBI Circular on Customer Protection, if you notify your bank of an unauthorized third-party transaction within 3 working days, your liability is ZERO. If the bank fails to resolve your dispute within 30 days, you can lodge a complaint with the RBI Integrated Ombudsman at cms.rbi.org.in.",
+    "answerMr": "आरबीआयच्या नियमांनुसार ३ दिवसांच्या आत बँकेला कळवल्यास ग्राहकाची जबाबदारी शून्य असते. बँकेने ३० दिवसांत निवारण न केल्यास आरबीआय लोकपालकडे (cms.rbi.org.in) तक्रार करावी."
+  },
+  {
+    "question": "Can police arrest someone over a WhatsApp video call ('Digital Arrest')?",
+    "questionMr": "पोलीस व्हॉट्सॲप व्हिडिओ कॉलवर कोणाला 'डिजिटल अरेस्ट' करू शकतात का?",
+    "answer": "NO. There is NO legal concept of 'Digital Arrest' under Indian law. Law enforcement agencies (Police, CBI, ED, Narcotics Bureau) never arrest people over video calls, nor do they demand money transfers to clear charges. Any such call is 100% a scam.",
+    "answerMr": "नाही. भारतीय कायद्यात 'डिजिटल अरेस्ट' नावाची कोणतीही संकल्पना नाही. कोणतेही पोलीस किंवा शासकीय अधिकारी व्हिडिओ कॉलवर पैसे मागत नाहीत."
+  },
+  {
+    "question": "Should I pay blackmailers in sextortion cases to prevent them from sharing photos?",
+    "questionMr": "सेक्सटॉर्शन प्रकरणात फोटोंच्या भीतीपोटी पैसे द्यावेत का?",
+    "answer": "NEVER pay money. Paying blackmailers does NOT stop them; it encourages them to demand even larger sums. Block the blackmailer immediately, preserve all message screenshots, and file an urgent complaint on 1930 or cybercrime.gov.in.",
+    "answerMr": "कधीही पैसे देऊ नका. पैसे दिल्याने ब्लॅकमेलिंग थांबत नाही, उलट अधिक पैशांची मागणी केली जाते. त्वरित ब्लॉक करा आणि १९३० वर तक्रार नोंदवा."
+  }
+]

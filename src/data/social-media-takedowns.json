@@ -1,0 +1,138 @@
+[
+  {
+    "id": "fake_account_deletion",
+    "platform": "Instagram / Facebook",
+    "platformMr": "इन्स्टाग्राम / फेसबुक",
+    "title": "Deleting Fake Profile Impersonating You",
+    "titleMr": "बनावट (Fake) अकाऊंट डिलीट व ब्लॉक करण्याची प्रक्रिया",
+    "icon": "UserX",
+    "urgency": "HIGH",
+    "steps": [
+      {
+        "step": 1,
+        "title": "Report Inside the App Immediately",
+        "titleMr": "ॲपमध्येच रिपोर्ट (Report) करा",
+        "desc": "Open the fake profile -> Click the 3 dots (...) at top right -> Select 'Report' -> Choose 'It's impersonating someone I know' or 'Impersonating me'."
+      },
+      {
+        "step": 2,
+        "title": "Get 5 Friends to Report the Same Profile",
+        "titleMr": "५ मित्रांकडून रिपोर्ट करायला लावा",
+        "desc": "Meta's AI automated moderation removes fake profiles faster when multiple independent accounts flag the same profile for impersonation within 24 hours."
+      },
+      {
+        "step": 3,
+        "title": "Submit Official Meta Takedown Form (No Account Needed)",
+        "titleMr": "अधिकृत मेटा (Meta) फॉर्म द्वारे टेकडाऊन मागणी करा",
+        "desc": "If the profile is not deleted within 24 hours, use Meta's web form: facebook.com/help/contact/295306987286129 to submit identity proof for immediate removal."
+      },
+      {
+        "step": 4,
+        "title": "Lock Your Original Facebook Profile",
+        "titleMr": "तुमचे मूळ प्रोफाईल लॉक (Lock Profile) करा",
+        "desc": "Go to your Facebook profile -> Click 3 dots -> Select 'Lock Profile' to prevent scammers from downloading your photos for future fake profiles."
+      }
+    ],
+    "officialLink": "https://www.facebook.com/help/contact/295306987286129",
+    "officialLinkLabel": "Meta Impersonation Takedown Form"
+  },
+  {
+    "id": "whatsapp_hacked_recovery",
+    "title": "Recover Hacked WhatsApp Account",
+    "titleMr": "हॅक झालेले व्हॉट्सॲप अकाऊंट परत मिळवणे",
+    "platform": "WhatsApp",
+    "platformMr": "व्हॉट्सॲप",
+    "icon": "MessageSquare",
+    "urgency": "HIGH",
+    "steps": [
+      {
+        "step": 1,
+        "title": "Re-install WhatsApp & Enter Your Number",
+        "titleMr": "व्हॉट्सॲप पुन्हा डाऊनलोड करून तुमचा नंबर टाका",
+        "desc": "Re-register on WhatsApp by entering your phone number and requesting SMS verification code."
+      },
+      {
+        "step": 2,
+        "title": "Enter 6-Digit SMS Code to Log Out Hacker",
+        "titleMr": "६ अंकी एसएमएस कोड टाका",
+        "desc": "Once you enter the 6-digit SMS code, the hacker will be AUTOMATICALLY logged out from their phone."
+      },
+      {
+        "step": 3,
+        "title": "If Hacker Set Two-Step Verification PIN",
+        "titleMr": "हॅकरने पिन लावल्यास ७ दिवस थांबा किंवा सपोर्टला मेल करा",
+        "desc": "If prompted for a 6-digit PIN you don't know, the hacker activated 2FA. You must wait 7 days to reset the PIN without code. Meanwhile, email support@whatsapp.com with subject: 'Stolen/Lost: Please deactivate my account' and your phone number in full international format (+91XXXXXXXXXX)."
+      },
+      {
+        "step": 4,
+        "title": "Broadcast Warning to Contacts via SMS / Call",
+        "titleMr": "नातेवाईकांना एसएमएस/कॉल करून सावध करा",
+        "desc": "Inform family that your WhatsApp was compromised so they do not transfer money to the hacker."
+      }
+    ],
+    "officialLink": "mailto:support@whatsapp.com?subject=Stolen%2FLost%3A%20Please%20deactivate%20my%20account",
+    "officialLinkLabel": "Email WhatsApp Support (support@whatsapp.com)"
+  },
+  {
+    "id": "stop_ncii_photo_removal",
+    "title": "Removing Morphed / Intimate Photos Online",
+    "titleMr": "एडिट / मॉर्फ केलेले फोटो इंटरनेटवरून हटवणे",
+    "platform": "StopNCII.org / All Platforms",
+    "platformMr": "StopNCII.org व सर्व प्लॅटफॉर्म्स",
+    "icon": "ShieldAlert",
+    "urgency": "CRITICAL",
+    "steps": [
+      {
+        "step": 1,
+        "title": "Do NOT Delete Original Photos from Phone",
+        "titleMr": "तुमच्या फोनमधील मूळ फोटो डिलीट करू नका",
+        "desc": "Original photos contain camera metadata needed by Nashik Cyber Police for forensic investigation."
+      },
+      {
+        "step": 2,
+        "title": "Generate Digital Fingerprint on StopNCII.org",
+        "titleMr": "StopNCII.org वर डिजिटल हॅश (Hash) तयार करा",
+        "desc": "Visit StopNCII.org (Non-Consensual Intimate Imagery portal). The site generates a unique digital hash fingerprint of the image ON YOUR PHONE without uploading your actual photo, and automatically blocks Meta (Insta/FB), TikTok, and major tech platforms from sharing it."
+      },
+      {
+        "step": 3,
+        "title": "File Urgent Complaint with Nashik Cyber Police",
+        "titleMr": "नाशिक सायबर पोलिसांकडे तातडीने नोंद करा",
+        "desc": "Visit Nashik Cyber Police Station (Gangapur Road) or call 1930 / Samanvaya Portal to get direct police intervention for takedown notices under Section 67A IT Act."
+      }
+    ],
+    "officialLink": "https://stopncii.org",
+    "officialLinkLabel": "Open StopNCII.org Hash Portal"
+  },
+  {
+    "id": "cyberbullying_harassment_block",
+    "title": "Cyberbullying & Account Takedown",
+    "titleMr": "ऑनलाईन छळ आणि अकाऊंट ब्लॉक करणे",
+    "platform": "Instagram / X / Snapchat",
+    "platformMr": "इन्स्टाग्राम / एक्स / स्नॅपचॅट",
+    "icon": "UserX",
+    "urgency": "MEDIUM",
+    "steps": [
+      {
+        "step": 1,
+        "title": "Take Full Screenshots Before Blocking",
+        "titleMr": "ब्लॉक करण्यापूर्वी सर्व स्क्रीनशॉट्स घ्या",
+        "desc": "Capture profile handle, exact post URLs, timestamps, and abusive chat messages."
+      },
+      {
+        "step": 2,
+        "title": "Use Platform Restriction & Block Features",
+        "titleMr": "'Restrict' किंवा 'Block' पर्याय वापरा",
+        "desc": "On Instagram, choose 'Restrict' so the bully cannot see when you are online or leave visible comments."
+      },
+      {
+        "step": 3,
+        "title": "File Takedown Notice on Nashik Samanvaya Portal",
+        "titleMr": "नाशिक 'समन्वय' पोर्टलवर ऑनलाईन तक्रार नोंदवा",
+        "desc": "Register complaint on Nashik Cyber Cell's Samanvaya Portal for police-directed platform notice."
+      }
+    ],
+    "officialLink": "https://cybercrime.gov.in",
+    "officialLinkLabel": "NCRP Cyber Harassment Portal"
+  }
+]

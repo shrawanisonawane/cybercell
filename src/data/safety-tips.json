@@ -1,0 +1,117 @@
+[
+  {
+    "audienceId": "students",
+    "title": "Students & Young Adults",
+    "titleMr": "विद्यार्थी आणि तरुण नागरिक",
+    "icon": "GraduationCap",
+    "description": "Protecting social media profiles, avoiding part-time job traps, and preventing gaming/crypto scams.",
+    "descriptionMr": "सोशल मीडिया सुरक्षितता, पार्ट-टाईम जॉब फ्रॉडपासून बचाव आणि सुरक्षित गेमिंग.",
+    "tips": [
+      {
+        "heading": "Enable 2-Step Verification Everywhere",
+        "headingMr": "प्रत्येक अकाऊंटवर २-स्टेप व्हेरीफिकेशन सुरु करा",
+        "detail": "Activate 2FA on Instagram, WhatsApp, Snapchat, and Discord using Google Authenticator or SMS PIN."
+      },
+      {
+        "heading": "Beware of 'Easy Money' Part-time Jobs",
+        "headingMr": "रोज ५००० रुपये कमवा' अशा मेसेजेसवर विश्वास ठेवू नका",
+        "detail": "No legitimate job pays Rs 2,000 daily for liking YouTube videos or completing Telegram tasks."
+      },
+      {
+        "heading": "Protect Intimate Photos & Camera Permissions",
+        "headingMr": "कॅमेरा आणि फोटो सुरक्षित ठेवा",
+        "detail": "Never engage in explicit video calls with unknown online acquaintances. Use StopNCII.org if photos are leaked."
+      },
+      {
+        "heading": "Don't Share Verification OTPs with Friends",
+        "headingMr": "मित्रालाही व्हॉट्सॲप कोड देऊ नका",
+        "detail": "If a friend's Instagram messages asking for a 6-digit code, their account is already hacked!"
+      }
+    ]
+  },
+  {
+    "audienceId": "seniors",
+    "title": "Senior Citizens",
+    "titleMr": "ज्येष्ठ नागरिक",
+    "icon": "UserCheck",
+    "description": "Guarding pension accounts, identifying fake bank/police calls, and safe messaging practices.",
+    "descriptionMr": "पेन्शन खाते संरक्षण, बनावट बँक व पोलीस कॉल्सपासून सावधानता.",
+    "tips": [
+      {
+        "heading": "UPI PIN is ONLY for SENDING Money",
+        "headingMr": "यूपीआय पिन फक्त पैसे पाठवण्यासाठी असतो",
+        "detail": "You NEVER enter your UPI PIN to RECEIVE pension, refunds, or customer care credits."
+      },
+      {
+        "heading": "Ignore Threats of 'Digital Arrest'",
+        "headingMr": "डिजिटल अरेस्टच्या कॉल्सला घाबरू नका",
+        "detail": "Police or CBI will NEVER arrest anyone over WhatsApp or Skype video calls or ask for money."
+      },
+      {
+        "heading": "Verify Customer Care Numbers on Official Sites",
+        "headingMr": "कस्टमर केअर नंबर फक्त अधिकृत वेबसाईटवरून घ्या",
+        "detail": "Never call phone numbers found in Google search images; they are often set up by scammers."
+      },
+      {
+        "heading": "Keep Daily UPI & Bank Transfer Limits Low",
+        "headingMr": "डेली यूपीआय लिमीट कमी ठेवा",
+        "detail": "Set a low daily transaction limit (e.g. Rs 5,000) on your mobile banking app for safety."
+      }
+    ]
+  },
+  {
+    "audienceId": "professionals",
+    "title": "Working Professionals",
+    "titleMr": "नोकरदार व व्यावसायिक",
+    "icon": "Briefcase",
+    "description": "Securing corporate emails, avoiding stock market trading scams, and protecting identity documents.",
+    "descriptionMr": "कॉर्पोरेट ईमेल सुरक्षा, ट्रेडिंग फ्रॉडपासून बचाव आणि ओळखीचे दस्तऐवज संरक्षण.",
+    "tips": [
+      {
+        "heading": "Cross-Check Stock Trading Brokers on SEBI Portal",
+        "headingMr": "शेअर मार्केट ब्रोकर सेबी (SEBI) मान्यताप्राप्त आहे का तपासा",
+        "detail": "Never transfer money into personal savings accounts for stock market trading."
+      },
+      {
+        "heading": "Mask Aadhaar Before Sharing Copies Online",
+        "headingMr": "मास्क केलेले आधार (Masked Aadhaar) वापरा",
+        "detail": "Use UIDAI's Masked Aadhaar feature so only the last 4 digits are visible for hotel/sim verification."
+      },
+      {
+        "heading": "Audit Registered Mobile Numbers on Sanchar Saathi",
+        "headingMr": "संचार साथीवर तुमच्या नावावरील सीम तपासा",
+        "detail": "Visit tafcop.sancharsaathi.gov.in every 6 months to check if any unauthorized SIM is issued in your name."
+      },
+      {
+        "heading": "Watch for Phishing Emails Claiming Tax Refunds",
+        "headingMr": "टॅक्स रिफंडच्या बनावट ईमेलपासून सावध राहा",
+        "detail": "Income tax departments send official communications from @incometax.gov.in domain only."
+      }
+    ]
+  },
+  {
+    "audienceId": "parents",
+    "title": "Parents & Guardians",
+    "titleMr": "पालक आणि मार्गदर्शक",
+    "icon": "ShieldAlert",
+    "description": "Monitoring children's online safety, preventing gaming in-app purchase debt, and cyberbullying awareness.",
+    "descriptionMr": "पालकांसाठी ऑनलाईन बाल-सुरक्षा आणि सायबर बुलिंग प्रतिबंध मार्गदर्शक.",
+    "tips": [
+      {
+        "heading": "Set Up Family Link & Parental Controls",
+        "headingMr": "फोनमध्ये पॅरेंटल कंट्रोल सुरु करा",
+        "detail": "Use Google Family Link to restrict unknown APK downloads and set app time limits."
+      },
+      {
+        "heading": "Do Not Save Credit Card Details on Kids' Devices",
+        "headingMr": "मुलांच्या गेममध्ये क्रेडिट कार्ड सेव्ह करू नका",
+        "detail": "Disable one-click in-app purchases on gaming apps (Free Fire, BGMI) to prevent accidental charges."
+      },
+      {
+        "heading": "Open Dialogue About Online Harassment & Stalking",
+        "headingMr": "मुलांशी संवादाचे वातावरण ठेवा",
+        "detail": "Ensure children know they can talk to you without fear if someone threatens or blackmails them online."
+      }
+    ]
+  }
+]

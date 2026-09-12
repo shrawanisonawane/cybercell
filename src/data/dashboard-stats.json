@@ -1,0 +1,45 @@
+{
+  "isDemoData": true,
+  "lastUpdated": "2026-09-01",
+  "dataPeriod": "January 2026 – August 2026 (Aggregated & Anonymized)",
+  "headline": {
+    "totalReported": 42850,
+    "topCategory": "UPI Fraud",
+    "topCategoryShare": "34.2%",
+    "fastestRising": "Investment / Digital Arrest Scam",
+    "fastestRisingPct": "+48.5%",
+    "fastestFalling": "Shopping Fraud",
+    "fastestFallingPct": "-12.4%"
+  },
+  "byCategory": [
+    { "categoryId": "upi_fraud", "categoryName": "UPI Fraud", "count": 14650, "pct": 34.2 },
+    { "categoryId": "investment_scam", "categoryName": "Investment & Digital Arrest Scam", "count": 8920, "pct": 20.8 },
+    { "categoryId": "job_scam", "categoryName": "Fake Job & Task Scam", "count": 5340, "pct": 12.5 },
+    { "categoryId": "financial_fraud", "categoryName": "Financial & Card Fraud", "count": 4210, "pct": 9.8 },
+    { "categoryId": "phishing", "categoryName": "Phishing & APK Malware", "count": 3150, "pct": 7.3 },
+    { "categoryId": "account_takeover", "categoryName": "Account Hacking & Impersonation", "count": 2840, "pct": 6.6 },
+    { "categoryId": "sextortion", "categoryName": "Sextortion & Harassment", "count": 1980, "pct": 4.6 },
+    { "categoryId": "other", "categoryName": "Other Cyber Crime", "count": 1760, "pct": 4.1 }
+  ],
+  "monthlyTrend": [
+    { "month": "Jan 2026", "upi_fraud": 1520, "investment_scam": 740, "job_scam": 510, "financial_fraud": 480, "phishing": 390 },
+    { "month": "Feb 2026", "upi_fraud": 1640, "investment_scam": 820, "job_scam": 580, "financial_fraud": 490, "phishing": 380 },
+    { "month": "Mar 2026", "upi_fraud": 1710, "investment_scam": 910, "job_scam": 640, "financial_fraud": 510, "phishing": 410 },
+    { "month": "Apr 2026", "upi_fraud": 1820, "investment_scam": 1050, "job_scam": 680, "financial_fraud": 530, "phishing": 390 },
+    { "month": "May 2026", "upi_fraud": 1910, "investment_scam": 1210, "job_scam": 720, "financial_fraud": 540, "phishing": 400 },
+    { "month": "Jun 2026", "upi_fraud": 1980, "investment_scam": 1340, "job_scam": 710, "financial_fraud": 550, "phishing": 390 },
+    { "month": "Jul 2026", "upi_fraud": 2040, "investment_scam": 1420, "job_scam": 750, "financial_fraud": 560, "phishing": 390 },
+    { "month": "Aug 2026", "upi_fraud": 2030, "investment_scam": 1430, "job_scam": 750, "financial_fraud": 550, "phishing": 400 }
+  ],
+  "emerging": [
+    { "categoryId": "investment_scam", "name": "Digital Arrest & Stock Trading Scams", "pctChange": 48.5, "trend": "up" },
+    { "categoryId": "malware_apk", "name": "Fake Electricity Bill APK Malwares", "pctChange": 31.2, "trend": "up" },
+    { "categoryId": "job_scam", "name": "YouTube Like / Prepaid Task Scams", "pctChange": 24.6, "trend": "up" },
+    { "categoryId": "sextortion", "name": "WhatsApp Video Call Blackmail", "pctChange": 14.2, "trend": "up" }
+  ],
+  "declining": [
+    { "categoryId": "shopping_fraud", "name": "Fake E-Commerce Website Fraud", "pctChange": -12.4, "trend": "down" },
+    { "categoryId": "phishing", "name": "Traditional Email Phishing", "pctChange": -8.1, "trend": "down" },
+    { "categoryId": "sim_mobile_fraud", "name": "Legacy SIM Swap via Paper ID", "pctChange": -5.3, "trend": "down" }
+  ]
+}

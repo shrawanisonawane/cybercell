@@ -12,7 +12,7 @@ export default function Header() {
     { path: '/', label: lang === 'mr' ? 'मुख्य पृष्ठ' : 'Home' },
     { path: '/what-happened-to-me', label: lang === 'mr' ? 'माझ्यासोबत काय घडले?' : 'What Happened To Me?' },
     { path: '/explorer', label: lang === 'mr' ? 'गुन्हे प्रकार सूची' : 'Incident Explorer' },
-    { path: '/report', label: lang === 'mr' ? 'तक्रार व मदत केंद्र' : 'Report & Help' },
+    { path: '/report', label: lang === 'mr' ? 'मार्गदर्शन व तक्रार हब' : 'What To Do & Guidance' },
   ];
 
   const isActive = (path) => {

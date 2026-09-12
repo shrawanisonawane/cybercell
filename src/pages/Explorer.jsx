@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Search, Shield, ChevronRight, AlertTriangle, Flame, Award } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import incidentsData from '../data/incidents.json';
+import RiskBadge from '../components/shared/RiskBadge';
 
 const trendingIds = ['upi_fraud', 'investment_scam', 'job_scam', 'sextortion', 'malware_apk', 'loan_app_fraud'];
 
@@ -60,6 +61,15 @@ export default function Explorer() {
             ? 'Select any cyber crime category to see plain-language explanations, how it happens, warning signs, evidence checklists, and immediate victim action steps.'
             : 'कोणत्याही प्रकारावर क्लिक करून फसवणूक कशी होते, धोक्याचे संकेत, जतन करायचे पुरावे व उपाय जाणून घ्या.'}
         </p>
+
+        {/* VINTAGE INDIAN COMIC BANNER FOR EXPLORER LIBRARY */}
+        <div className="my-4 rounded-3xl overflow-hidden border-2 border-slate-300 shadow-md bg-amber-50/50 p-2 flex items-center justify-center">
+          <img
+            src="/cartoons/explorer_banner.jpg"
+            alt="16 Types of Cyber Crime Awareness Vintage Indian Comic Panel"
+            className="w-full h-auto max-h-[480px] object-contain rounded-2xl"
+          />
+        </div>
       </div>
 
       {/* Search & Filter Bar */}
@@ -124,13 +134,22 @@ export default function Explorer() {
                       #{inc.id}
                     </span>
                   )}
-                  <span className={`text-[11px] font-heading font-bold px-2.5 py-1 rounded-full border ${riskColor}`}>
-                    {inc.riskLevelDefault} RISK
-                  </span>
+                  <RiskBadge riskLevel={inc.riskLevelDefault} />
                 </div>
 
+                {/* DEDICATED VINTAGE INDIAN CARTOON PICTURE */}
+                {inc.image && (
+                  <div className="rounded-2xl overflow-hidden border-2 border-slate-300 shadow-xs bg-amber-50/50 p-1 aspect-[16/10] my-2 w-full flex items-center justify-center">
+                    <img
+                      src={inc.image}
+                      alt={lang === 'en' ? inc.title : inc.titleMr || inc.title}
+                      className="w-full h-full object-contain rounded-xl"
+                    />
+                  </div>
+                )}
+
                 <div>
-                  <h2 className="font-heading font-bold text-charcoal text-xl group-hover:text-navy-700 transition leading-snug">
+                  <h2 className="font-heading font-extrabold text-charcoal text-xl group-hover:text-navy-700 transition leading-snug">
                     {lang === 'en' ? inc.title : inc.titleMr || inc.title}
                   </h2>
                   <p className="text-xs sm:text-sm text-charcoal-600 mt-2 leading-relaxed line-clamp-3 font-normal">

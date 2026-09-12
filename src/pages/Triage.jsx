@@ -86,21 +86,54 @@ export default function Triage() {
             )}
           </div>
 
+          {/* VINTAGE CARTOON IMAGE FOR TRIAGE QUESTION */}
+          <div className="rounded-2xl overflow-hidden border border-slate-300 shadow-xs bg-amber-50/50 p-2 w-full flex items-center justify-center">
+            <img
+              src="/cartoons/triage_question.jpg"
+              alt="What Happened Vintage Indian Comic Illustration"
+              className="w-full h-auto max-h-[360px] object-contain rounded-xl"
+            />
+          </div>
+
           <div className="space-y-4">
-            {currentQuestion.options.map((opt, idx) => (
-              <button
-                key={idx}
-                onClick={() => handleSelectOption(opt)}
-                className="w-full text-left p-5 sm:p-6 rounded-2xl bg-white border border-slate-200 hover:border-blue-600 hover:bg-blue-50/60 transition duration-150 flex items-center justify-between group shadow-xs cursor-pointer min-h-[72px]"
-              >
-                <span className="font-heading font-extrabold text-slate-900 text-base sm:text-lg group-hover:text-blue-800 leading-snug">
-                  {lang === 'mr' ? (opt.labelMr || opt.label) : opt.label}
-                </span>
-                <div className="w-10 h-10 rounded-full bg-blue-100 group-hover:bg-blue-700 text-blue-800 group-hover:text-white flex items-center justify-center shrink-0 ml-4 transition-colors">
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-0.5 transition-transform" />
-                </div>
-              </button>
-            ))}
+            {currentQuestion.options.map((opt, idx) => {
+              const optImage = opt.resultId && incidentsData.find((i) => i.id === opt.resultId)?.image
+                ? incidentsData.find((i) => i.id === opt.resultId).image
+                : [
+                    '/cartoons/scen_upi_fraud.jpg',
+                    '/cartoons/scen_phishing.jpg',
+                    '/cartoons/scen_account_takeover.jpg',
+                    '/cartoons/scen_fake_social_profile.jpg',
+                    '/cartoons/scen_identity_photo_misuse.jpg',
+                    '/cartoons/scen_sextortion.jpg',
+                    '/cartoons/scen_online_harassment.jpg',
+                    '/cartoons/scen_job_scam.jpg',
+                    '/cartoons/scen_shopping_fraud.jpg',
+                    '/cartoons/scen_loan_app_fraud.jpg'
+                  ][idx % 10];
+
+              return (
+                <button
+                  key={idx}
+                  onClick={() => handleSelectOption(opt)}
+                  className="w-full text-left p-4 sm:p-5 rounded-2xl bg-white border border-slate-200 hover:border-blue-600 hover:bg-blue-50/60 transition duration-150 flex items-center justify-between group shadow-xs cursor-pointer min-h-[80px]"
+                >
+                  <div className="flex items-center gap-4">
+                    <img
+                      src={optImage}
+                      alt="Option Cartoon Illustration"
+                      className="w-20 h-20 object-contain rounded-xl border-2 border-slate-300 shrink-0 shadow-xs p-1 bg-amber-50/50"
+                    />
+                    <span className="font-heading font-extrabold text-slate-900 text-base sm:text-lg group-hover:text-blue-800 leading-snug">
+                      {lang === 'mr' ? (opt.labelMr || opt.label) : opt.label}
+                    </span>
+                  </div>
+                  <div className="w-10 h-10 rounded-full bg-blue-100 group-hover:bg-blue-700 text-blue-800 group-hover:text-white flex items-center justify-center shrink-0 ml-3 transition-colors">
+                    <ArrowRight className="w-5 h-5 group-hover:translate-x-0.5 transition-transform" />
+                  </div>
+                </button>
+              );
+            })}
           </div>
 
           <div className="pt-4 border-t border-slate-200 flex items-center justify-between text-xs font-normal text-slate-500">
@@ -174,7 +207,7 @@ export default function Triage() {
               <div className="flex items-center gap-2.5">
                 <ShieldAlert className="w-6 h-6 text-red-700" />
                 <h3 className="font-heading font-extrabold text-slate-900 text-xl">
-                  {lang === 'mr' ? 'तुम्ही आता त्वरित काय करावे (पायऱ्या):' : 'What You Should Do Right Now:'}
+                  {lang === 'mr' ? 'तुम्ही आता त्वरित काय करावे:' : 'What You Should Do Right Now:'}
                 </h3>
               </div>
 
@@ -238,7 +271,7 @@ export default function Triage() {
               
               <div className="space-y-4 text-sm font-normal">
                 <div className="p-4 rounded-2xl bg-emerald-50 border border-emerald-200 space-y-1">
-                  <span className="font-heading font-bold text-emerald-800 block text-base">✔ DO (हे करा):</span>
+                  <span className="font-heading font-bold text-emerald-800 block text-base">{lang === 'mr' ? '✔ हे करा:' : '✔ DO:'}</span>
                   <ul className="space-y-1 text-slate-700">
                     {result.incident.doList.map((d, i) => (
                       <li key={i}>• {d}</li>
@@ -246,7 +279,7 @@ export default function Triage() {
                   </ul>
                 </div>
                 <div className="p-4 rounded-2xl bg-red-50 border border-red-200 space-y-1">
-                  <span className="font-heading font-bold text-red-800 block text-base">✖ DON’T (हे करू नका):</span>
+                  <span className="font-heading font-bold text-red-800 block text-base">{lang === 'mr' ? '✖ हे करू नका:' : '✖ DON’T:'}</span>
                   <ul className="space-y-1 text-slate-700">
                     {result.incident.dontList.map((d, i) => (
                       <li key={i}>• {d}</li>

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Shield, PhoneCall, AlertTriangle, Search, ChevronRight, IndianRupee, MessageSquare, AlertCircle, Smartphone, Lock, UserX, CreditCard, ShieldAlert, Briefcase, ShoppingBag, Cpu, ArrowRight, Building2, Award, CheckCircle2 } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import incidentsData from '../data/incidents.json';
+import RiskBadge from '../components/shared/RiskBadge';
 
 const categoryIcons = {
   upi_fraud: IndianRupee,
@@ -113,8 +114,20 @@ export default function Home() {
               : 'Simple visual step-by-step guidance for citizens of Nashik district. No login required. Discover what happened, what to do right now, and how to file your report.'}
           </p>
 
+          {/* VINTAGE INDIAN CARTOON HERO ILLUSTRATION BANNER */}
+          <div className="my-6 rounded-3xl overflow-hidden border-2 border-slate-300 shadow-md bg-amber-50/50 p-2">
+            <img
+              src="/cartoons/hero.jpg"
+              alt="Nashik Cyber Police & Citizen Awareness Vintage Indian Cartoon Illustration"
+              className="w-full h-auto max-h-[380px] object-cover rounded-2xl"
+            />
+            <p className="text-xs text-slate-600 font-heading font-bold text-center mt-2">
+              {lang === 'mr' ? '🎨 नाशिक शहर सायबर पोलीस ठाणे — सायबर सुरक्षा चित्रकथा मार्गदर्शन' : '🎨 Nashik Cyber Police Station — Citizen Cyber Safety Comic Guidance'}
+            </p>
+          </div>
+
           {/* TWO PRIMARY VISUAL CTA CARDS (Pictures & Icons for Easy Identification) */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6 pt-4 text-left">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6 pt-2 text-left">
             
             {/* CTA 1: What Happened To Me? (Visual Guided Assessment) */}
             <Link
@@ -225,25 +238,34 @@ export default function Home() {
               <Link
                 key={incident.id}
                 to={`/explorer/${incident.id}`}
-                className="group bg-slate-50 hover:bg-blue-50/70 p-5 rounded-2xl border border-slate-200 shadow-xs hover:border-blue-400 transition-all duration-200 flex flex-col justify-between focus:outline-none focus:ring-2 focus:ring-blue-600"
+                className="group bg-slate-50 hover:bg-blue-50/70 p-4 sm:p-5 rounded-3xl border border-slate-200 shadow-xs hover:border-blue-400 transition-all duration-200 flex flex-col justify-between focus:outline-none focus:ring-2 focus:ring-blue-600"
               >
                 <div>
-                  {/* Big Visual Header Badge */}
+                  {/* Top Badges & Risk */}
                   <div className="flex items-center justify-between gap-2 mb-3">
-                    <div className={`w-12 h-12 rounded-2xl ${visual.iconBg} flex items-center justify-center shrink-0 shadow-xs group-hover:scale-105 transition-transform`}>
-                      <IconComp className="w-6 h-6" />
+                    <div className={`w-10 h-10 rounded-2xl ${visual.iconBg} flex items-center justify-center shrink-0 shadow-xs group-hover:scale-105 transition-transform`}>
+                      <IconComp className="w-5 h-5" />
                     </div>
-                    <span className={`text-[11px] font-heading font-bold px-2.5 py-0.5 rounded-full border ${riskColor}`}>
-                      {incident.riskLevelDefault} RISK
-                    </span>
+                    <RiskBadge riskLevel={incident.riskLevelDefault} />
                   </div>
 
+                  {/* DEDICATED VINTAGE INDIAN CARTOON PICTURE */}
+                  {incident.image && (
+                    <div className="mb-3 rounded-2xl overflow-hidden border-2 border-slate-300 shadow-xs bg-amber-50/50 p-1 aspect-[16/10] w-full flex items-center justify-center">
+                      <img
+                        src={incident.image}
+                        alt={lang === 'mr' ? incident.titleMr : incident.title}
+                        className="w-full h-full object-contain rounded-xl"
+                      />
+                    </div>
+                  )}
+
                   {/* Prominent Visual Category Badge */}
-                  <div className={`inline-block px-3 py-1 rounded-xl text-xs font-heading font-extrabold border mb-2.5 ${visual.bg}`}>
+                  <div className={`inline-block px-3 py-1 rounded-xl text-xs font-heading font-extrabold border mb-2 ${visual.bg}`}>
                     {lang === 'mr' ? visual.labelMr : visual.labelEn}
                   </div>
 
-                  <h3 className="text-base font-heading font-bold text-slate-900 group-hover:text-blue-800 transition leading-snug mb-1">
+                  <h3 className="text-base font-heading font-extrabold text-slate-900 group-hover:text-blue-800 transition leading-snug mb-1">
                     {lang === 'mr' ? (incident.titleMr || incident.title) : incident.title}
                   </h3>
 
@@ -253,7 +275,7 @@ export default function Home() {
                 </div>
 
                 <div className="mt-4 pt-3 border-t border-slate-200/60 flex items-center justify-between text-xs font-heading font-bold text-blue-800">
-                  <span>{lang === 'mr' ? 'माहिती व उपाय पहा →' : 'View Details & Action →'}</span>
+                  <span>{lang === 'mr' ? 'तपशील पहा →' : 'View Details →'}</span>
                   <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </div>
               </Link>

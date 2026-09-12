@@ -17,30 +17,59 @@ export default function IncidentDetail() {
     .map((relId) => incidentsData.find((i) => i.id === relId))
     .filter(Boolean);
 
+  // Helper to format text: Marathi only when lang === 'mr', English when lang === 'en'
+  const formatText = (mrText, enText) => {
+    if (lang === 'mr') {
+      return mrText || enText;
+    }
+    return enText || mrText;
+  };
+
+  // Helper for array items
+  const getBilingualList = (mrList = [], enList = []) => {
+    const primaryEn = enList || [];
+    return primaryEn.map((enItem, idx) => {
+      const mrItem = mrList?.[idx];
+      if (lang === 'mr') {
+        return mrItem || enItem;
+      }
+      return enItem || mrItem;
+    });
+  };
+
+  const actionSteps = getBilingualList(incident.victimActionStepsMr, incident.victimActionSteps);
+  const howItHappens = getBilingualList(incident.howDoesItHappenMr, incident.howDoesItHappen);
+  const warningSigns = getBilingualList(incident.warningSignsMr, incident.warningSigns);
+  const possibleImpact = getBilingualList(incident.possibleImpactMr, incident.possibleImpact);
+  const evidenceToPreserve = getBilingualList(incident.evidenceToPreserveMr, incident.evidenceToPreserve);
+  const doList = getBilingualList(incident.doListMr, incident.doList);
+  const dontList = getBilingualList(incident.dontListMr, incident.dontList);
+  const timelineStages = incident.timelineStages || [];
+
   return (
-    <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8 min-h-screen pb-24 sm:pb-12 font-sans bg-white text-charcoal">
-      
+    <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8 min-h-screen pb-24 sm:pb-12 font-sans bg-white text-slate-900">
+
       {/* Back Navigation */}
       <Link
         to="/explorer"
-        className="inline-flex items-center gap-2 text-sm font-heading font-bold text-charcoal hover:text-lavender-deep transition min-h-[44px]"
+        className="inline-flex items-center gap-2 text-sm font-heading font-bold text-slate-800 hover:text-blue-800 transition min-h-[44px]"
       >
-        <ArrowLeft className="w-4 h-4 text-lavender-deep" />
-        <span>{lang === 'en' ? 'Back to All Incidents' : 'गुन्हे प्रकार सूचीकडे मागे जा'}</span>
+        <ArrowLeft className="w-4 h-4 text-blue-700" />
+        <span>{lang === 'mr' ? 'गुन्हे प्रकार सूचीकडे मागे जा' : 'Back to All Incidents'}</span>
       </Link>
 
       {/* Hero Header Card */}
-      <div className="bg-white rounded-3xl border border-lavender-100 p-6 sm:p-8 shadow-xs space-y-6">
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-lavender-100 pb-6">
+      <div className="bg-white rounded-3xl border border-slate-200 p-6 sm:p-8 shadow-xs space-y-6">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-200 pb-6">
           <div className="space-y-1.5">
-            <span className="text-xs font-mono text-lavender-deep uppercase tracking-wider bg-lavender-bg border border-lavender-100 px-3 py-1 rounded-full">
-              Category ID: #{incident.id}
+            <span className="text-xs font-mono text-blue-900 uppercase tracking-wider bg-blue-50 border border-blue-200 px-3 py-1 rounded-full font-bold">
+              ID: #{incident.id}
             </span>
-            <h1 className="text-2xl sm:text-4xl font-heading font-extrabold text-charcoal mt-2 leading-tight">
-              {lang === 'en' ? incident.title : incident.titleMr || incident.title}
+            <h1 className="text-2xl sm:text-4xl font-heading font-extrabold text-slate-900 mt-2 leading-tight">
+              {formatText(incident.titleMr, incident.title)}
             </h1>
-            <p className="text-sm sm:text-base text-charcoal-600 font-normal">
-              {lang === 'en' ? incident.shortSummary : incident.shortSummaryMr || incident.shortSummary}
+            <p className="text-sm sm:text-base text-slate-600 font-normal">
+              {formatText(incident.shortSummaryMr, incident.shortSummary)}
             </p>
           </div>
 
@@ -49,57 +78,77 @@ export default function IncidentDetail() {
           </div>
         </div>
 
+        {/* DEDICATED VINTAGE INDIAN CARTOON BANNER */}
+        {incident.image && (
+          <div className="rounded-2xl overflow-hidden border-2 border-slate-300 shadow-md bg-amber-50/50 p-2 aspect-[16/9] w-full flex items-center justify-center">
+            <img
+              src={incident.image}
+              alt={formatText(incident.titleMr, incident.title)}
+              className="w-full h-full object-contain rounded-xl"
+            />
+          </div>
+        )}
+
         {/* Highlighted Emergency Action Box */}
-        <div className="p-5 rounded-2xl bg-risk-high-bg border border-risk-high/30 text-charcoal shadow-xs flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="p-5 rounded-2xl bg-red-50 border border-red-200 text-slate-900 shadow-xs flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="space-y-1 text-center sm:text-left">
-            <span className="text-xs font-heading font-bold uppercase tracking-wider text-risk-high block">
-              {lang === 'en' ? '🚨 Immediate Reporting Action:' : '🚨 तातडीने करायची तक्रार:'}
+            <span className="text-xs font-heading font-extrabold uppercase tracking-wider text-red-700 block">
+              {lang === 'mr' ? '🚨 तातडीने करायची तक्रार:' : '🚨 Immediate Reporting Action:'}
             </span>
-            <p className="text-sm font-semibold leading-relaxed text-charcoal">
-              {incident.whenToReport}
+            <p className="text-sm font-bold leading-relaxed text-slate-900">
+              {formatText(incident.whenToReportMr, incident.whenToReport)}
             </p>
           </div>
           <div className="flex items-center gap-3 shrink-0">
             <a
               href="tel:1930"
-              className="bg-risk-high text-white font-heading font-bold text-xs px-4 py-2.5 rounded-xl shadow-xs hover:bg-red-700 transition flex items-center gap-1.5 min-h-[44px]"
+              className="bg-red-600 text-white font-heading font-bold text-xs px-4 py-2.5 rounded-xl shadow-xs hover:bg-red-700 transition flex items-center gap-1.5 min-h-[44px]"
             >
               <PhoneCall className="w-4 h-4 text-white" />
-              <span>{lang === 'en' ? 'Call 1930' : '१९३० कॉल'}</span>
+              <span>{lang === 'mr' ? '१९३० कॉल' : 'Call 1930'}</span>
             </a>
             <Link
               to="/report"
-              className="bg-lavender-deep text-white font-heading font-bold text-xs px-4 py-2.5 rounded-xl shadow-xs hover:bg-lavender-light hover:text-lavender-deep transition min-h-[44px] flex items-center"
+              className="bg-blue-700 text-white font-heading font-bold text-xs px-4 py-2.5 rounded-xl shadow-xs hover:bg-blue-800 transition min-h-[44px] flex items-center"
             >
-              {lang === 'en' ? 'Report Hub →' : 'तक्रार मार्ग →'}
+              {lang === 'mr' ? 'तक्रार मार्ग →' : 'Report Hub →'}
             </Link>
           </div>
         </div>
       </div>
 
       {/* ── 1. IMMEDIATE VICTIM ACTION STEPS (Visible by Default) ──── */}
-      <div className="bg-white rounded-3xl border border-lavender-100 p-6 sm:p-8 shadow-xs space-y-5">
-        <div className="flex items-center gap-3 border-b border-lavender-100 pb-4">
-          <div className="w-10 h-10 rounded-xl bg-lavender-100 text-lavender-deep flex items-center justify-center font-bold">
+      <div className="bg-white rounded-3xl border border-slate-200 p-6 sm:p-8 shadow-xs space-y-5">
+        <div className="flex items-center gap-3 border-b border-slate-200 pb-4">
+          <div className="w-10 h-10 rounded-xl bg-blue-100 text-blue-800 flex items-center justify-center font-bold">
             <ListOrdered className="w-5 h-5" />
           </div>
           <div>
-            <h2 className="font-heading font-extrabold text-charcoal text-xl">
-              {lang === 'en' ? 'What To Do Right Now (Numbered Action Checklist)' : 'आत्ताच काय करावे (तात्काळ कृती यादी)'}
+            <h2 className="font-heading font-extrabold text-slate-900 text-xl">
+              {lang === 'mr' ? 'तुमची आता त्वरित काय करावे - पायऱ्या' : 'What To Do Right Now (Numbered Action Checklist)'}
             </h2>
-            <p className="text-xs text-charcoal-500 font-normal">
-              {lang === 'en' ? 'Follow these steps in order immediately after noticing the fraud.' : 'फसवणूक लक्षात आल्यानंतर खालील क्रमाने त्वरित कृती करा.'}
+            <p className="text-xs text-slate-500 font-normal">
+              {lang === 'mr' ? 'फसवणूक लक्षात आल्यानंतर खालील क्रमाने त्वरित कृती करा.' : 'Follow these steps in order immediately after noticing the fraud.'}
             </p>
           </div>
         </div>
 
+        {/* PICTORIAL VINTAGE COMIC BANNER FOR INCIDENT ACTION STEPS */}
+        <div className="rounded-2xl overflow-hidden border border-slate-300 shadow-xs bg-amber-50/60 p-2 mb-4 w-full flex items-center justify-center">
+          <img
+            src="/cartoons/step1.jpg"
+            alt="Incident Action Steps 1930 Helpline Vintage Comic Banner"
+            className="w-full h-auto max-h-[360px] object-contain rounded-xl"
+          />
+        </div>
+
         <ol className="space-y-3">
-          {incident.victimActionSteps.map((step, idx) => (
-            <li key={idx} className="flex items-start gap-4 p-4 rounded-2xl bg-lavender-bg border border-lavender-100">
-              <span className="w-7 h-7 rounded-full bg-lavender-deep text-white font-heading font-bold text-xs flex items-center justify-center shrink-0 mt-0.5 shadow-xs">
+          {actionSteps.map((step, idx) => (
+            <li key={idx} className="flex items-start gap-4 p-4 rounded-2xl bg-slate-50 border border-slate-200">
+              <span className="w-7 h-7 rounded-full bg-blue-700 text-white font-heading font-bold text-xs flex items-center justify-center shrink-0 mt-0.5 shadow-xs">
                 {idx + 1}
               </span>
-              <span className="text-sm sm:text-base font-semibold text-charcoal leading-relaxed">{step}</span>
+              <span className="text-sm sm:text-base font-semibold text-slate-900 leading-relaxed">{step}</span>
             </li>
           ))}
         </ol>
@@ -107,31 +156,31 @@ export default function IncidentDetail() {
 
       {/* ── 2. COLLAPSED ACCORDIONS BELOW THE FOLD ────────────────── */}
       <div className="space-y-4">
-        
+
         {/* Accordion 1: What is it & How does it happen */}
         <Accordion
-          title={lang === 'en' ? '📌 What is it & How does it happen?' : '📌 व्याख्या आणि फसवणूक कशी होते?'}
+          title={lang === 'mr' ? '📌 व्याख्या आणि फसवणूक कशी होते?' : '📌 What is it & How does it happen?'}
           icon={HelpCircle}
           defaultOpen={false}
         >
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
-            <div className="p-4 rounded-2xl bg-lavender-bg border border-lavender-100 space-y-2">
-              <h3 className="font-heading font-bold text-charcoal text-base">
-                {lang === 'en' ? 'What is it?' : 'व्याख्या / प्रकार:'}
+            <div className="p-4 rounded-2xl bg-blue-50 border border-blue-200 space-y-2">
+              <h3 className="font-heading font-bold text-slate-900 text-base">
+                {lang === 'mr' ? 'व्याख्या / प्रकार:' : 'What is it?'}
               </h3>
-              <p className="text-charcoal-700 leading-relaxed font-normal">
-                {lang === 'en' ? incident.whatIsIt : incident.whatIsItMr || incident.whatIsIt}
+              <p className="text-slate-800 leading-relaxed font-normal">
+                {lang === 'mr' ? (incident.whatIsItMr || incident.whatIsIt) : incident.whatIsIt}
               </p>
             </div>
 
-            <div className="p-4 rounded-2xl bg-lavender-bg border border-lavender-100 space-y-2">
-              <h3 className="font-heading font-bold text-charcoal text-base">
-                {lang === 'en' ? 'How does it happen?' : 'फसवणुकीची पद्धत:'}
+            <div className="p-4 rounded-2xl bg-blue-50 border border-blue-200 space-y-2">
+              <h3 className="font-heading font-bold text-slate-900 text-base">
+                {lang === 'mr' ? 'फसवणुकीची पद्धत:' : 'How does it happen?'}
               </h3>
-              <ul className="space-y-2 text-charcoal-700 font-normal">
-                {incident.howDoesItHappen.map((item, idx) => (
+              <ul className="space-y-2 text-slate-800 font-normal">
+                {howItHappens.map((item, idx) => (
                   <li key={idx} className="flex items-start gap-2">
-                    <span className="w-2 h-2 rounded-full bg-lavender-deep shrink-0 mt-2"></span>
+                    <span className="w-2 h-2 rounded-full bg-blue-700 shrink-0 mt-2"></span>
                     <span>{item}</span>
                   </li>
                 ))}
@@ -142,30 +191,30 @@ export default function IncidentDetail() {
 
         {/* Accordion 2: Warning Signs & Possible Impact */}
         <Accordion
-          title={lang === 'en' ? '⚠️ Warning Signs & Possible Impact' : '⚠️ धोक्याचे संकेत व होणारे नुकसान'}
+          title={lang === 'mr' ? '⚠️ धोक्याचे संकेत व होणारे नुकसान' : '⚠️ Warning Signs & Possible Impact'}
           icon={AlertTriangle}
           defaultOpen={false}
         >
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
-            <div className="p-4 rounded-2xl bg-risk-med-bg border border-risk-med/30 space-y-2">
-              <h3 className="font-heading font-bold text-risk-med text-base flex items-center gap-1.5">
-                <AlertTriangle className="w-4 h-4 text-risk-med" />
-                <span>{lang === 'en' ? 'Warning Signs (Red Flags)' : 'धोक्याचे संकेत (रेड फ्लॅग्स)'}</span>
+            <div className="p-4 rounded-2xl bg-amber-50 border border-amber-200 space-y-2">
+              <h3 className="font-heading font-bold text-amber-900 text-base flex items-center gap-1.5">
+                <AlertTriangle className="w-4 h-4 text-amber-700" />
+                <span>{lang === 'mr' ? 'धोक्याचे संकेत' : 'Warning Signs (Red Flags)'}</span>
               </h3>
-              <ul className="space-y-2 text-charcoal-700 font-normal">
-                {incident.warningSigns.map((sign, idx) => (
+              <ul className="space-y-2 text-slate-800 font-normal">
+                {warningSigns.map((sign, idx) => (
                   <li key={idx}>• {sign}</li>
                 ))}
               </ul>
             </div>
 
-            <div className="p-4 rounded-2xl bg-risk-high-bg border border-risk-high/30 space-y-2">
-              <h3 className="font-heading font-bold text-risk-high text-base flex items-center gap-1.5">
-                <ShieldAlert className="w-4 h-4 text-risk-high" />
-                <span>{lang === 'en' ? 'Possible Impact' : 'होणारे नुकसान'}</span>
+            <div className="p-4 rounded-2xl bg-red-50 border border-red-200 space-y-2">
+              <h3 className="font-heading font-bold text-red-900 text-base flex items-center gap-1.5">
+                <ShieldAlert className="w-4 h-4 text-red-700" />
+                <span>{lang === 'mr' ? 'होणारे नुकसान' : 'Possible Impact'}</span>
               </h3>
-              <ul className="space-y-2 text-charcoal-700 font-normal">
-                {incident.possibleImpact.map((imp, idx) => (
+              <ul className="space-y-2 text-slate-800 font-normal">
+                {possibleImpact.map((imp, idx) => (
                   <li key={idx}>• {imp}</li>
                 ))}
               </ul>
@@ -175,20 +224,20 @@ export default function IncidentDetail() {
 
         {/* Accordion 3: Evidence to Preserve */}
         <Accordion
-          title={lang === 'en' ? '📁 Evidence to Preserve for Reporting' : '📁 तक्रारीसाठी जतन करायचे पुरावे'}
+          title={lang === 'mr' ? '📁 तक्रारीसाठी जतन करायचे पुरावे' : '📁 Evidence to Preserve for Reporting'}
           icon={FileText}
           defaultOpen={false}
         >
           <div className="space-y-3">
-            <p className="text-xs text-charcoal-500 font-normal">
-              {lang === 'en'
-                ? 'Preserve these documents and screenshots before deleting any app or chat history:'
-                : 'ॲप किंवा मेसेज डिलीट करण्यापूर्वी खालील पुरावे आणि स्क्रीनशॉट जतन करा:'}
+            <p className="text-xs text-slate-600 font-normal">
+              {lang === 'mr'
+                ? 'ॲप किंवा मेसेज डिलीट करण्यापूर्वी खालील पुरावे आणि स्क्रीनशॉट जतन करा:'
+                : 'Preserve these documents and screenshots before deleting any app or chat history:'}
             </p>
-            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-charcoal font-normal">
-              {incident.evidenceToPreserve.map((ev, idx) => (
-                <li key={idx} className="flex items-start gap-3 p-3 rounded-xl bg-lavender-bg border border-lavender-100">
-                  <CheckCircle2 className="w-5 h-5 text-risk-low shrink-0 mt-0.5" />
+            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-slate-900 font-normal">
+              {evidenceToPreserve.map((ev, idx) => (
+                <li key={idx} className="flex items-start gap-3 p-3 rounded-xl bg-slate-50 border border-slate-200">
+                  <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" />
                   <span>{ev}</span>
                 </li>
               ))}
@@ -198,24 +247,24 @@ export default function IncidentDetail() {
 
         {/* Accordion 4: Do's and Don'ts Checklist */}
         <Accordion
-          title={lang === 'en' ? '✅/❌ Do’s & Don’ts Checklist' : '✅/❌ काय करावे आणि काय करू नये'}
+          title={lang === 'mr' ? '✅/❌ काय करावे आणि काय करू नये' : '✅/❌ Do’s & Don’ts Checklist'}
           icon={ShieldCheck}
           defaultOpen={false}
         >
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
-            <div className="p-4 rounded-2xl bg-risk-low-bg border border-risk-low/30 space-y-2">
-              <span className="font-heading font-bold text-risk-low block text-base">✔ DO (काय करावे):</span>
-              <ul className="space-y-2 text-charcoal-700 font-normal">
-                {incident.doList.map((d, i) => (
+            <div className="p-4 rounded-2xl bg-emerald-50 border border-emerald-200 space-y-2">
+              <span className="font-heading font-bold text-emerald-800 block text-base">{lang === 'mr' ? '✔ काय करावे:' : '✔ DO:'}</span>
+              <ul className="space-y-2 text-slate-800 font-normal">
+                {doList.map((d, i) => (
                   <li key={i}>• {d}</li>
                 ))}
               </ul>
             </div>
 
-            <div className="p-4 rounded-2xl bg-risk-high-bg border border-risk-high/30 space-y-2">
-              <span className="font-heading font-bold text-risk-high block text-base">✖ DON’T (काय करू नये):</span>
-              <ul className="space-y-2 text-charcoal-700 font-normal">
-                {incident.dontList.map((d, i) => (
+            <div className="p-4 rounded-2xl bg-red-50 border border-red-200 space-y-2">
+              <span className="font-heading font-bold text-red-800 block text-base">{lang === 'mr' ? '✖ काय करू नये:' : '✖ DON’T:'}</span>
+              <ul className="space-y-2 text-slate-800 font-normal">
+                {dontList.map((d, i) => (
                   <li key={i}>• {d}</li>
                 ))}
               </ul>
@@ -225,17 +274,17 @@ export default function IncidentDetail() {
 
         {/* Accordion 5: Incident Timeline Stages */}
         <Accordion
-          title={lang === 'en' ? '⏳ Incident Timeline Stages' : '⏳ फसवणुकीचे टप्पे (घटनाक्रम)'}
+          title={lang === 'mr' ? '⏳ फसवणुकीचे टप्पे' : '⏳ Incident Timeline Stages'}
           icon={Clock}
           defaultOpen={false}
         >
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            {incident.timelineStages.map((stg, i) => (
-              <div key={i} className="p-4 rounded-2xl bg-lavender-bg border border-lavender-100 space-y-1.5">
-                <span className="text-xs font-heading font-bold uppercase tracking-wider text-lavender-deep block">
-                  Stage {i + 1}: {stg.stage}
+            {timelineStages.map((stg, i) => (
+              <div key={i} className="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-1.5">
+                <span className="text-xs font-heading font-bold uppercase tracking-wider text-blue-900 block">
+                  {lang === 'mr' ? `टप्पा ${i + 1}: ${stg.stageMr || stg.stage}` : `Stage ${i + 1}: ${stg.stage}`}
                 </span>
-                <p className="text-xs text-charcoal-700 leading-relaxed font-normal">{stg.description}</p>
+                <p className="text-xs text-slate-700 leading-relaxed font-normal">{lang === 'mr' ? (stg.descriptionMr || stg.description) : stg.description}</p>
               </div>
             ))}
           </div>
@@ -243,22 +292,22 @@ export default function IncidentDetail() {
 
         {/* Accordion 6: How to Prevent This */}
         <Accordion
-          title={lang === 'en' ? '🛡️ How to Prevent This in Future' : '🛡️ भविष्यात फसवणूक टाळण्यासाठी सुरक्षा उपाय'}
+          title={lang === 'mr' ? '🛡️ भविष्यात फसवणूक टाळण्यासाठी सुरक्षा उपाय' : '🛡️ How to Prevent This in Future'}
           icon={ShieldCheck}
           defaultOpen={false}
         >
-          <div className="p-4 rounded-2xl bg-lavender-bg border border-lavender-100 space-y-3 text-sm text-charcoal font-normal">
+          <div className="p-4 rounded-2xl bg-blue-50 border border-blue-200 space-y-3 text-sm text-slate-800 font-normal">
             <p>
-              {lang === 'en'
-                ? 'Stay safe by enabling 2-Factor Authentication on all banking and social media apps. Never share your OTP, PIN, or password with anyone, regardless of who they claim to be.'
-                : 'तुमच्या बँक व सोशल मीडिया अकाऊंटवर २-स्टेप व्हॅलिडेशन चालू ठेवा. कोणताही ओटीपी, पिन किंवा पासवर्ड कोणालाही शेअर करू नका.'}
+              {lang === 'mr'
+                ? 'तुमच्या बँक व सोशल मीडिया अकाऊंटवर २-स्टेप व्हॅलिडेशन चालू ठेवा. कोणताही ओटीपी, पिन किंवा पासवर्ड कोणालाही शेअर करू नका.'
+                : 'Stay safe by enabling 2-Factor Authentication on all banking and social media apps. Never share your OTP, PIN, or password with anyone, regardless of who they claim to be.'}
             </p>
             <div className="pt-2">
               <Link
                 to="/report"
-                className="inline-flex items-center gap-1.5 text-xs font-heading font-bold text-lavender-deep underline hover:text-lavender-deep"
+                className="inline-flex items-center gap-1.5 text-xs font-heading font-bold text-blue-800 underline hover:text-blue-900"
               >
-                <span>{lang === 'en' ? 'View Official Reporting & Ombudsman Pathways →' : 'अधिकृत तक्रार मार्ग पहा →'}</span>
+                <span>{lang === 'mr' ? 'अधिकृत तक्रार मार्ग पहा →' : 'View Official Reporting & Ombudsman Pathways →'}</span>
               </Link>
             </div>
           </div>
@@ -268,24 +317,24 @@ export default function IncidentDetail() {
 
       {/* Related Incidents Cross-Links */}
       {relatedList.length > 0 && (
-        <div className="space-y-4 pt-4 border-t border-lavender-100">
-          <h2 className="font-heading font-bold text-charcoal text-lg">
-            {lang === 'en' ? 'Related Incident Types:' : 'संबंधित गुन्हे प्रकार:'}
+        <div className="space-y-4 pt-4 border-t border-slate-200">
+          <h2 className="font-heading font-bold text-slate-900 text-lg">
+            {lang === 'mr' ? 'संबंधित गुन्हे प्रकार:' : 'Related Incident Types:'}
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             {relatedList.map((rel) => (
               <Link
                 key={rel.id}
                 to={`/explorer/${rel.id}`}
-                className="p-4 rounded-2xl bg-white border border-lavender-100 hover:border-lavender-200 transition flex items-center justify-between group shadow-xs"
+                className="p-4 rounded-2xl bg-white border border-slate-200 hover:border-blue-400 transition flex items-center justify-between group shadow-xs"
               >
                 <div>
-                  <h3 className="font-heading font-bold text-charcoal text-sm group-hover:text-lavender-deep">
-                    {lang === 'en' ? rel.title : rel.titleMr || rel.title}
+                  <h3 className="font-heading font-bold text-slate-900 text-sm group-hover:text-blue-800">
+                    {lang === 'mr' ? (rel.titleMr || rel.title) : rel.title}
                   </h3>
-                  <span className="text-[11px] font-mono text-charcoal-500">#{rel.id}</span>
+                  <span className="text-[11px] font-mono text-slate-500">#{rel.id}</span>
                 </div>
-                <ChevronRight className="w-5 h-5 text-charcoal-500 group-hover:translate-x-1 transition-transform" />
+                <ChevronRight className="w-5 h-5 text-slate-400 group-hover:translate-x-1 transition-transform" />
               </Link>
             ))}
           </div>
@@ -296,20 +345,20 @@ export default function IncidentDetail() {
       <DisclaimerNotice />
 
       {/* FIXED / STICKY BOTTOM MOBILE CTA BAR */}
-      <div className="fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-t border-lavender-200 p-3 shadow-lg block sm:hidden">
+      <div className="fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-t border-slate-200 p-3 shadow-lg block sm:hidden">
         <div className="flex items-center justify-between gap-3 max-w-md mx-auto">
           <a
             href="tel:1930"
-            className="flex-1 bg-risk-high text-white font-heading font-bold text-xs py-3 rounded-xl text-center shadow-xs flex items-center justify-center gap-1.5 min-h-[44px]"
+            className="flex-1 bg-red-600 text-white font-heading font-bold text-xs py-3 rounded-xl text-center shadow-xs flex items-center justify-center gap-1.5 min-h-[44px]"
           >
             <PhoneCall className="w-4 h-4" />
             <span>1930 Helpline</span>
           </a>
           <Link
             to="/report"
-            className="flex-1 bg-lavender-deep text-white font-heading font-bold text-xs py-3 rounded-xl text-center shadow-xs flex items-center justify-center gap-1 min-h-[44px]"
+            className="flex-1 bg-blue-700 text-white font-heading font-bold text-xs py-3 rounded-xl text-center shadow-xs flex items-center justify-center gap-1 min-h-[44px]"
           >
-            <span>Report Now →</span>
+            <span>{lang === 'mr' ? 'तक्रार करा →' : 'Report Now →'}</span>
           </Link>
         </div>
       </div>
@@ -317,5 +366,3 @@ export default function IncidentDetail() {
     </div>
   );
 }
-
-

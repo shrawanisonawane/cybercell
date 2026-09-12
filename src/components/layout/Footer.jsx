@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Shield, ExternalLink, Building2, Award, PhoneCall } from 'lucide-react';
+import { Shield, ExternalLink, Building2, Award } from 'lucide-react';
 import { useLanguage } from '../../context/LanguageContext';
 
 export default function Footer() {
@@ -20,7 +20,7 @@ export default function Footer() {
               </div>
               <div>
                 <h3 className="font-heading font-extrabold text-slate-900 text-base flex items-center gap-1">
-                  <span>{lang === 'mr' ? 'नाशिक सायबर सेल' : 'Nashik Cyber Cell'}</span>
+                  <span>{lang === 'mr' ? 'नाशिक शहर सायबर सेल' : 'Nashik City Cyber Cell'}</span>
                   <Award className="w-3.5 h-3.5 text-blue-700" />
                 </h3>
                 <p className="text-xs text-blue-800 font-bold">
@@ -34,38 +34,56 @@ export default function Footer() {
                 : 'Public Cyber Crime Awareness & Victim Guidance Portal operated under Nashik Police. Dedicated to helping citizens prevent and report cyber fraud.'}
             </p>
             <div className="flex items-center gap-1.5 text-[11px] text-slate-600 font-medium">
-              <Building2 className="w-3.5 h-3.5 text-blue-700" />
-              <span>गंगापूर रोड, पोलीस आयुक्तालय परिसर, नाशिक</span>
+              <Building2 className="w-3.5 h-3.5 text-blue-700 shrink-0" />
+              <span>{lang === 'mr' ? 'गंगापूर रोड, पोलीस आयुक्तालय परिसर, नाशिक - ४२२००२' : 'Gangapur Road, Police Commissionerate Office, Nashik - 422002'}</span>
             </div>
           </div>
 
-          {/* Column 2: Emergency Helplines & Official Links */}
+          {/* Column 2: Official Citizen Portals & Apps */}
           <div className="space-y-3">
             <h4 className="font-heading font-bold text-slate-900 text-xs tracking-wider uppercase border-b border-slate-200 pb-2">
-              {lang === 'mr' ? 'आपत्कालीन हेल्पलाइन व पोर्टल' : 'Emergency Helplines & Portals'}
+              {lang === 'mr' ? 'नागरिक सुविधा ॲप्स व पोर्टल्स' : 'Official Citizen Portals & Apps'}
             </h4>
             <ul className="space-y-2 text-xs">
-              <li className="p-2.5 rounded-xl bg-white border border-red-200 flex items-center justify-between shadow-xs">
-                <div>
-                  <span className="block font-heading font-bold text-red-700">National Cyber Helpline</span>
-                  <span className="text-[11px] text-slate-500">24x7 Financial Fraud Freeze</span>
-                </div>
-                <a href="tel:1930" className="text-base font-heading font-extrabold text-red-700 hover:underline">1930</a>
-              </li>
-              <li className="p-2.5 rounded-xl bg-blue-50 border border-blue-200 flex items-center justify-between shadow-xs">
-                <div>
-                  <span className="block font-heading font-bold text-blue-900">नाशिक सायबर पोलीस फोन</span>
-                  <span className="text-[11px] text-slate-600">गंगापूर रोड, नाशिक</span>
-                </div>
-                <a href="tel:02532305226" className="text-sm font-heading font-extrabold text-blue-800 hover:underline">0253-2305226</a>
+              <li>
+                <a
+                  href="https://sancharsaathi.gov.in/sfc/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-slate-700 hover:text-blue-800 transition flex items-center justify-between py-1 font-medium bg-white p-2.5 rounded-xl border border-slate-200 shadow-xs"
+                >
+                  <span>{lang === 'mr' ? 'चक्षू ॲप - संशयास्पद कॉल्स व मेसेज रिपोर्ट' : 'Chakshu App (Report Spam / Fraud Calls)'}</span>
+                  <ExternalLink className="w-3.5 h-3.5 text-blue-700 shrink-0 ml-2" />
+                </a>
               </li>
               <li>
-                <a href="https://cybercrime.gov.in" target="_blank" rel="noreferrer" className="text-slate-700 hover:text-blue-800 transition flex items-center justify-between py-1 font-medium">
-                  <span>{lang === 'mr' ? 'राष्ट्रीय सायबर पोर्टल (cybercrime.gov.in)' : 'National Cyber Crime Portal'}</span>
-                  <ExternalLink className="w-3.5 h-3.5 text-blue-700" />
+                <a
+                  href="https://sancharsaathi.gov.in"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-slate-700 hover:text-blue-800 transition flex items-center justify-between py-1 font-medium bg-white p-2.5 rounded-xl border border-slate-200 shadow-xs"
+                >
+                  <span>{lang === 'mr' ? 'संचार साथी - मोबाईल ब्लॉक पोर्टल' : 'Sanchar Saathi (Block Stolen Mobile)'}</span>
+                  <ExternalLink className="w-3.5 h-3.5 text-blue-700 shrink-0 ml-2" />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://cms.rbi.org.in"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-slate-700 hover:text-blue-800 transition flex items-center justify-between py-1 font-medium bg-white p-2.5 rounded-xl border border-slate-200 shadow-xs"
+                >
+                  <span>{lang === 'mr' ? 'आरबीआय एकात्मिक लोकपाल योजना' : 'RBI Integrated Ombudsman Scheme'}</span>
+                  <ExternalLink className="w-3.5 h-3.5 text-blue-700 shrink-0 ml-2" />
                 </a>
               </li>
             </ul>
+            <p className="text-[11px] text-slate-500 font-normal leading-normal pt-1">
+              {lang === 'mr'
+                ? 'टीप: अधिकृत पोलीस पोर्टलवर तक्रार नोंदणी ही पोलीस अधिकाऱ्यांमार्फत केली जाते.'
+                : 'Note: Official police portal reporting is conducted by Police Officers.'}
+            </p>
           </div>
 
           {/* Column 3: Footer Destinations */}
@@ -99,7 +117,7 @@ export default function Footer() {
 
         {/* Footer Bottom Strip */}
         <div className="pt-4 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-600">
-          <p>© {new Date().getFullYear()} Nashik City Cyber Police Station (नाशिक सायबर सेल). Govt of Maharashtra.</p>
+          <p>© {new Date().getFullYear()} {lang === 'mr' ? 'नाशिक शहर सायबर पोलीस ठाणे, महाराष्ट्र शासन' : 'Nashik City Cyber Police Station, Govt of Maharashtra'}.</p>
           <div className="flex items-center gap-3 font-medium">
             <Link to="/dashboard" className="hover:text-blue-800">{lang === 'mr' ? 'डॅशबोर्ड' : 'Dashboard'}</Link>
             <span>•</span>
